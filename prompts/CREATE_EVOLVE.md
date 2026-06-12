@@ -1,29 +1,23 @@
-# Create a file called `evolve.py`
+# Build an evolution loop
 
-Create `evolve.py` in this directory: an LLM-driven evolution loop for cache eviction policies.
+Your task: write a small script that uses an LLM to discover better cache eviction policies, and gets better over iterations.
 
-## Existing modules (just import them)
+The idea is simple: ask an LLM for a policy, score it, feed the best ones back as inspiration, and repeat. Hand this doc to the coding assistant of your choice (or implement this yourself).
 
-- `llm.py` — `LLM` class. Call `llm.send(msg)` → returns `{"code": str, "full_response": str}`. Each instance maintains conversation history. Use `llm.reset()` to clear. Create a new `LLM()` per iteration.
-- `evaluator.py` — `score(code: str)` → Dict `{"w106_10pct": float}` (obj hit rate, higher=better). Returns 0.0 on broken code.
+Expected time to finish this: ~15 minutes.
 
-## What the LLM must produce
+## What is already available
+- `llm.py` — the `LLM` class. `llm.send(msg)` → `{"code", "full_response"}`, where `code` is the last code block in the reply. Each instance keeps its own conversation history, so use a fresh `LLM()` per policy.
+- `evaluator.py`:
+  - `compile_check(code)` → `(ok, error)` — builds the policy. On failure the error string is the compiler output; feed it back to the LLM to fix.
+  - `score(code)` → `{"w106_10pct": float}` — byte hit rate, higher is better.
+- `prompts/EVICTION.md`: describing how to write a new policy. Use it as-is or feel free to edit for clarity.
+- `initial_program.cpp`: implementation of LRU. Can use this as the seed for round 1 and as a baseline.
 
-A Python snippet with 5 functions: `init_hook(params)`, `hit_hook(data, req)`, `miss_hook(data, req)`, `eviction_hook(data, req)` → obj_id to evict, `remove_hook(data, obj_id)`. Available on `req`: `.obj_id`, `.obj_size`. Do NOT expose `.next_access_vtime` to the LLM (it's oracle info — defeats the purpose). You can provide the `initial_program.py` as the seed / initial program if needed. Only stdlib allowed.
+A policy is a short C++ snippet.
 
-The LLM prompt must stress that `eviction_hook` must return an obj_id present in `data` and also remove it from `data`.
-
-## What to build
-
-1. **`build_prompt(top_programs=None)`** — returns the LLM prompt string. Describes the hook interface, the goal (maximize byte hit rate), and optionally includes top-K `(code, score)` pairs as inspiration for improvement.
-
-2. **`run_evolution(n_iters=5, samples_per_iter=2, n_retries=2)`** — the loop:
-   - Each sample: new `LLM()`, build prompt (with top-K from population if any), generate code
-   - Validate with `exec()` + check hooks exist; on failure, send error back to LLM and retry
-   - Evaluate with `score(code)`; store `{code, score, iter}` in a list
-   - Print progress per sample, best-so-far per iteration
-   - Save final population to `results.json`
-
-3. **`if __name__ == "__main__"` block** that runs it.
-
-Keep it under ~100 lines total.
+## The loop
+- Seed the population with the LRU program and its score.
+- Each round, generate a few new policies. Build each one; on a build failure send the error back and let the LLM retry a couple of times before giving up.
+- Score what builds, keep it in the population, and feed the current best policies back into the next prompt as inspiration.
+- Print progress as you go, and save the final ranked population to a JSON file.
