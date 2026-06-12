@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PolicySmith Leaderboard</title>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --surface: #1a1d27;
+      --surface2: #232638;
+      --border: #2e3248;
+      --accent: #6c63ff;
+      --accent2: #48c774;
+      --text: #e2e4f0;
+      --text2: #8b8fa8;
+      --danger: #ff6b6b;
+      --gold: #ffd700;
+      --silver: #c0c0c0;
+      --bronze: #cd7f32;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; min-height: 100vh; }
+
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 1.2rem 2rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    header h1 { font-size: 1.4rem; font-weight: 700; color: var(--accent); }
+    header p  { font-size: 0.85rem; color: var(--text2); }
+    .badge { background: var(--accent); color: #fff; border-radius: 4px; padding: 2px 8px; font-size: 0.75rem; font-weight: 600; }
+
+    main { max-width: 1300px; margin: 0 auto; padding: 1.5rem 1.5rem; }
+
+    /* ---- filters ---- */
+    .filters {
+      display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: flex-end;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1.25rem;
+    }
+    .filters label { display: flex; flex-direction: column; gap: 4px; font-size: 0.78rem; color: var(--text2); }
+    .filters select, .filters input[type=text] {
+      background: var(--surface2); color: var(--text); border: 1px solid var(--border);
+      border-radius: 5px; padding: 6px 10px; font-size: 0.85rem; min-width: 130px;
+    }
+    .filters select:focus { outline: 2px solid var(--accent); }
+    .btn {
+      padding: 7px 18px; border-radius: 5px; border: none; cursor: pointer;
+      font-size: 0.85rem; font-weight: 600;
+    }
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-primary:hover { filter: brightness(1.15); }
+    .btn-secondary { background: var(--surface2); color: var(--text); border: 1px solid var(--border); }
+
+    /* ---- stats bar ---- */
+    .stats-bar {
+      display: flex; gap: 1rem; margin-bottom: 1.25rem; flex-wrap: wrap;
+    }
+    .stat-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 8px; padding: 0.8rem 1.2rem; flex: 1; min-width: 140px;
+    }
+    .stat-card .val { font-size: 1.5rem; font-weight: 700; color: var(--accent); }
+    .stat-card .lbl { font-size: 0.75rem; color: var(--text2); margin-top: 2px; }
+
+    /* ---- table ---- */
+    .table-wrap { overflow-x: auto; border-radius: 8px; border: 1px solid var(--border); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+    thead tr { background: var(--surface2); }
+    thead th {
+      text-align: left; padding: 10px 12px; color: var(--text2); font-weight: 600;
+      white-space: nowrap; position: sticky; top: 0; background: var(--surface2);
+      cursor: pointer; user-select: none;
+    }
+    thead th:hover { color: var(--text); }
+    thead th.sorted { color: var(--accent); }
+    tbody tr { border-top: 1px solid var(--border); transition: background 0.1s; }
+    tbody tr:hover { background: var(--surface2); }
+    td { padding: 9px 12px; vertical-align: middle; }
+    td.rank { font-weight: 700; width: 40px; text-align: center; }
+    .medal-1 { color: var(--gold); }
+    .medal-2 { color: var(--silver); }
+    .medal-3 { color: var(--bronze); }
+    .tag {
+      display: inline-block; border-radius: 3px; padding: 1px 7px;
+      font-size: 0.72rem; font-weight: 600;
+    }
+    .tag-vulcan { background: #3b2e8a; color: #b8b0ff; }
+    .tag-classical { background: #1e4a2e; color: #7ee8a2; }
+    .bar-cell { display: flex; align-items: center; gap: 6px; }
+    .bar { background: var(--border); border-radius: 3px; height: 6px; flex: 1; max-width: 80px; }
+    .bar-fill { height: 100%; border-radius: 3px; background: var(--accent2); }
+    .mrr-hi { color: var(--accent2); font-weight: 600; }
+    .mrr-lo { color: var(--danger); }
+    .detail-btn {
+      background: none; border: 1px solid var(--border); color: var(--text2);
+      border-radius: 4px; padding: 2px 8px; font-size: 0.75rem; cursor: pointer;
+    }
+    .detail-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* ---- modal ---- */
+    .modal-backdrop {
+      display: none; position: fixed; inset: 0; background: rgba(0,0,0,.6);
+      z-index: 100; align-items: center; justify-content: center;
+    }
+    .modal-backdrop.open { display: flex; }
+    .modal {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 10px; padding: 1.5rem; width: 90%; max-width: 740px;
+      max-height: 85vh; overflow-y: auto;
+    }
+    .modal h2 { font-size: 1.1rem; margin-bottom: 1rem; color: var(--accent); }
+    .modal-close { float: right; background: none; border: none; color: var(--text2); font-size: 1.3rem; cursor: pointer; }
+    .scenario-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.5rem;
+    }
+    .scenario-card {
+      background: var(--surface2); border: 1px solid var(--border); border-radius: 6px; padding: 0.6rem 0.8rem;
+    }
+    .scenario-card .key { font-size: 0.75rem; color: var(--text2); }
+    .scenario-card .bhr { font-size: 1rem; font-weight: 700; color: var(--accent2); }
+    .scenario-card .ohr { font-size: 0.78rem; color: var(--text2); }
+    .meta-row { display: flex; gap: 2rem; flex-wrap: wrap; margin-bottom: 1rem; font-size: 0.84rem; }
+    .meta-row span { color: var(--text2); } .meta-row strong { color: var(--text); }
+
+    .loading { text-align: center; padding: 3rem; color: var(--text2); }
+    .empty { text-align: center; padding: 3rem; color: var(--text2); font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>PolicySmith Leaderboard <span class="badge">LDOS 2026</span></h1>
+    <p>Cache eviction heuristic competition — byte hit rate vs. FIFO baseline</p>
+  </div>
+</header>
+
+<main>
+  <!-- Stats bar -->
+  <div class="stats-bar">
+    <div class="stat-card"><div class="val" id="stat-count">—</div><div class="lbl">Submissions</div></div>
+    <div class="stat-card"><div class="val" id="stat-best-mrr">—</div><div class="lbl">Best MRR vs FIFO</div></div>
+    <div class="stat-card"><div class="val" id="stat-best-byte">—</div><div class="lbl">Best Mean Byte HR</div></div>
+    <div class="stat-card"><div class="val" id="stat-teams">—</div><div class="lbl">Teams</div></div>
+  </div>
+
+  <!-- Filters -->
+  <div class="filters">
+    <label>Sort by
+      <select id="f-sort">
+        <option value="mrr">MRR vs FIFO (default)</option>
+        <option value="mean_byte_hr">Mean Byte Hit Rate</option>
+        <option value="mean_obj_hr">Mean Object Hit Rate</option>
+        <option value="submitted_at">Submission Time</option>
+      </select>
+    </label>
+    <label>Filter trace
+      <select id="f-trace">
+        <option value="">All traces</option>
+        {% for t in traces %}<option value="{{ t }}">{{ t }}</option>{% endfor %}
+      </select>
+    </label>
+    <label>Filter cache size
+      <select id="f-size">
+        <option value="">All sizes</option>
+        {% for s in sizes %}<option value="{{ s }}">{{ s }}</option>{% endfor %}
+      </select>
+    </label>
+    <label>Metric shown
+      <select id="f-metric">
+        <option value="byte_hit_rate">Byte Hit Rate</option>
+        <option value="obj_hit_rate">Object Hit Rate</option>
+      </select>
+    </label>
+    <label>Search
+      <input type="text" id="f-search" placeholder="name / group / heuristic"/>
+    </label>
+    <button class="btn btn-primary" id="btn-apply">Apply</button>
+    <button class="btn btn-secondary" id="btn-reset">Reset</button>
+  </div>
+
+  <!-- Table -->
+  <div class="table-wrap">
+    <table id="lb-table">
+      <thead>
+        <tr>
+          <th class="rank">#</th>
+          <th>Heuristic</th>
+          <th>Submitter / Group</th>
+          <th>Type</th>
+          <th>MRR vs FIFO</th>
+          <th id="metric-col-header">Byte Hit Rate</th>
+          <th>Obj Hit Rate</th>
+          <th>Submitted</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="lb-body">
+        <tr><td colspan="9" class="loading">Loading…</td></tr>
+      </tbody>
+    </table>
+  </div>
+</main>
+
+<!-- Detail modal -->
+<div class="modal-backdrop" id="modal-backdrop">
+  <div class="modal" id="modal-content">
+    <button class="modal-close" id="modal-close">&times;</button>
+    <h2 id="modal-title">Details</h2>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<script>
+const TRACES = {{ traces | tojson }};
+const SIZES  = {{ sizes  | tojson }};
+let allRows = [];
+
+async function fetchLeaderboard() {
+  const sort   = document.getElementById("f-sort").value;
+  const trace  = document.getElementById("f-trace").value;
+  const size   = document.getElementById("f-size").value;
+  const metric = document.getElementById("f-metric").value;
+
+  let url = `/api/leaderboard?sort=${sort}&limit=200`;
+  if (trace) url += `&trace=${trace}`;
+  if (size)  url += `&size=${size}`;
+
+  const resp = await fetch(url);
+  allRows = await resp.json();
+  renderTable(allRows, metric);
+  renderStats(allRows);
+}
+
+function renderStats(rows) {
+  document.getElementById("stat-count").textContent = rows.length;
+  const best_mrr  = Math.max(...rows.map(r => r.mrr  ?? 0)).toFixed(4);
+  const best_byte = Math.max(...rows.map(r => r.mean_byte_hr ?? 0)).toFixed(4);
+  const teams     = new Set(rows.map(r => r.group_name || r.submitter_name)).size;
+  document.getElementById("stat-best-mrr").textContent  = best_mrr > 0 ? best_mrr + "x" : "—";
+  document.getElementById("stat-best-byte").textContent = best_byte > 0 ? best_byte : "—";
+  document.getElementById("stat-teams").textContent     = teams;
+}
+
+function renderTable(rows, metric) {
+  metric = metric || document.getElementById("f-metric").value;
+  document.getElementById("metric-col-header").textContent =
+    metric === "byte_hit_rate" ? "Byte Hit Rate" : "Object Hit Rate";
+
+  const search = document.getElementById("f-search").value.toLowerCase();
+  const filtered = search
+    ? rows.filter(r =>
+        (r.heuristic_name||"").toLowerCase().includes(search) ||
+        (r.submitter_name||"").toLowerCase().includes(search) ||
+        (r.group_name||"").toLowerCase().includes(search))
+    : rows;
+
+  const maxByte = Math.max(...filtered.map(r => r.mean_byte_hr || 0)) || 1;
+  const tbody = document.getElementById("lb-body");
+
+  if (!filtered.length) {
+    tbody.innerHTML = `<tr><td colspan="9" class="empty">No submissions yet.</td></tr>`;
+    return;
+  }
+
+  tbody.innerHTML = filtered.map((r, i) => {
+    const rank  = i + 1;
+    const medal = rank === 1 ? "medal-1" : rank === 2 ? "medal-2" : rank === 3 ? "medal-3" : "";
+    const rankStr = rank <= 3 ? ["🥇","🥈","🥉"][rank-1] : rank;
+    const typeTag = r.algo_type === "vulcanevolve"
+      ? `<span class="tag tag-vulcan">vulcan</span>`
+      : `<span class="tag tag-classical">classical</span>`;
+    const mrr = r.mrr != null ? r.mrr.toFixed(4) : "—";
+    const mrrClass = r.mrr != null ? (r.mrr >= 1 ? "mrr-hi" : "mrr-lo") : "";
+    const dispVal  = metric === "byte_hit_rate" ? r.mean_byte_hr : r.mean_obj_hr;
+    const pct = dispVal / maxByte * 100;
+    const date = r.submitted_at ? r.submitted_at.substring(0,16).replace("T"," ") : "";
+    const desc = r.description ? `<br><small style="color:var(--text2)">${esc(r.description)}</small>` : "";
+
+    return `<tr>
+      <td class="rank ${medal}">${rankStr}</td>
+      <td><strong>${esc(r.heuristic_name)}</strong>${desc}</td>
+      <td>${esc(r.submitter_name)}${r.group_name ? ` <span style="color:var(--text2)">/ ${esc(r.group_name)}</span>` : ""}</td>
+      <td>${typeTag}</td>
+      <td class="${mrrClass}">${mrr}${r.mrr != null ? "x" : ""}</td>
+      <td><div class="bar-cell"><div class="bar"><div class="bar-fill" style="width:${pct}%"></div></div>${dispVal != null ? dispVal.toFixed(4) : "—"}</div></td>
+      <td>${r.mean_obj_hr != null ? r.mean_obj_hr.toFixed(4) : "—"}</td>
+      <td style="color:var(--text2);font-size:0.78rem">${date}</td>
+      <td><button class="detail-btn" onclick="showDetail(${r.id})">details</button></td>
+    </tr>`;
+  }).join("");
+}
+
+function esc(s) {
+  return String(s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+}
+
+async function showDetail(id) {
+  const resp = await fetch(`/api/submission/${id}`);
+  const data = await resp.json();
+  document.getElementById("modal-title").textContent = data.heuristic_name;
+
+  const results = data.results || {};
+  const keys = Object.keys(results).sort();
+
+  const scenCards = keys.map(k => {
+    const v = results[k];
+    return `<div class="scenario-card">
+      <div class="key">${k}</div>
+      <div class="bhr">${(v.byte_hit_rate||0).toFixed(4)}</div>
+      <div class="ohr">obj: ${(v.obj_hit_rate||0).toFixed(4)}</div>
+    </div>`;
+  }).join("");
+
+  document.getElementById("modal-body").innerHTML = `
+    <div class="meta-row">
+      <div><span>Submitter: </span><strong>${esc(data.submitter_name)}</strong></div>
+      <div><span>Group: </span><strong>${esc(data.group_name||"—")}</strong></div>
+      <div><span>Type: </span><strong>${esc(data.algo_type)}</strong></div>
+      <div><span>MRR: </span><strong>${data.mrr != null ? data.mrr.toFixed(4)+"x" : "—"}</strong></div>
+      <div><span>Submitted: </span><strong>${(data.submitted_at||"").substring(0,16).replace("T"," ")}</strong></div>
+    </div>
+    ${data.description ? `<p style="color:var(--text2);margin-bottom:1rem;font-size:0.85rem">${esc(data.description)}</p>` : ""}
+    <h3 style="font-size:0.85rem;color:var(--text2);margin-bottom:0.5rem">All 30 scenarios</h3>
+    <div class="scenario-grid">${scenCards}</div>
+  `;
+  document.getElementById("modal-backdrop").classList.add("open");
+}
+
+document.getElementById("modal-close").onclick = () =>
+  document.getElementById("modal-backdrop").classList.remove("open");
+document.getElementById("modal-backdrop").onclick = (e) => {
+  if (e.target === document.getElementById("modal-backdrop"))
+    document.getElementById("modal-backdrop").classList.remove("open");
+};
+
+document.getElementById("btn-apply").onclick = fetchLeaderboard;
+document.getElementById("btn-reset").onclick = () => {
+  document.getElementById("f-sort").value   = "mrr";
+  document.getElementById("f-trace").value  = "";
+  document.getElementById("f-size").value   = "";
+  document.getElementById("f-metric").value = "byte_hit_rate";
+  document.getElementById("f-search").value = "";
+  fetchLeaderboard();
+};
+document.getElementById("f-search").addEventListener("input", () =>
+  renderTable(allRows));
+document.getElementById("f-metric").addEventListener("change", () =>
+  renderTable(allRows));
+
+fetchLeaderboard();
+setInterval(fetchLeaderboard, 30000);
+</script>
+</body>
+</html>
