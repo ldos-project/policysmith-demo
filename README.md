@@ -1,3 +1,6 @@
+# LiteLLM server
+Used LiteLLM version `1.88.1` with `python3.11` for the demo: `litellm --config litellm_config.yaml`
+
 # Leaderboard
 
 0. Install Flask: `pip3 install flask`
