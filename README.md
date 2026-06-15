@@ -3,8 +3,9 @@
 2. Install build deps (CMake, GLib, zstd): `./libcachesim/scripts/install_dependency.sh`
 3. Create and activate a venv: `python3 -m venv .venv && source .venv/bin/activate`
 4. Install Python deps: `pip3 install openai` (then set your API key in `llm.py`)
-5. Build the evaluator: `mkdir build && cmake ../ && cd build && make -j`
-6. Download traces:
+5. Run: `cp initial_program.cpp libcachesim/libCacheSim/cache/eviction/cpp/LLMCode.h`
+6. Build the evaluator: `mkdir build && cd build && cmake ../  && make -j`
+7. Download traces:
     ```bash
     mkdir traces && cd traces
     for file in w105 w87 w86 w93 w89 w103 w94 w90 w106 w99; do
@@ -12,4 +13,4 @@
     done
     cd ..
     ```
-7. Run: `python test_evaluator.py` then `python evolve.py`
+8. Run: `python test_evaluator.py` then `python evolve.py`
