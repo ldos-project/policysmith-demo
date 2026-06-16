@@ -20,7 +20,7 @@ TRACE_DIR = os.path.join(HERE, "traces")
 BUILD_DIR = os.path.join(HERE, "build")
 RUN_ALGO = os.path.join(BUILD_DIR, "run_algo.o")
 LLMCODE_H = os.path.join(
-    HERE, "libcachesim", "libCacheSim", "include", "LLMCode.h"
+    HERE, "libcachesim", "libCacheSim", "cache", "eviction", "cpp", "LLMCode.h"
 )
 
 TRAIN_TRACES = ["w106"]
