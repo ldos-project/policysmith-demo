@@ -3,10 +3,10 @@
 full_eval.py — evaluate a Vulcan heuristic on all test traces/sizes and optionally submit.
 
 Evaluate (saves results to a JSON file):
-    python full_eval.py path/to/heuristic.cpp [--server http://localhost:5000]
+    python full_eval.py path/to/heuristic.cpp [--parallel]
 
 Submit a saved result file:
-    python full_eval.py --submit results/mypolicy_20260612_143000.json [--server http://localhost:5000]
+    python full_eval.py --submit results/mypolicy_20260612_143000.json [--server <url>]
 """
 
 import os, sys, json, argparse, urllib.request, urllib.error
@@ -14,7 +14,7 @@ from datetime import datetime, timezone
 from evaluator import TRACE_DIR, score_full
 
 RESULTS_DIR    = os.path.join(os.path.dirname(TRACE_DIR), "results")
-DEFAULT_SERVER = "http://localhost:5000"
+DEFAULT_SERVER = "https://dashboard.dwivedula.dev/"
 
 
 def print_results_table(results: dict, label: str = "Results") -> None:
@@ -44,10 +44,19 @@ def save_result(basename: str, cpp_source: str, results: dict, metadata: dict) -
 
 
 def submit(payload: dict, server_url: str = DEFAULT_SERVER) -> dict | None:
-    data = json.dumps({"metadata": payload["metadata"], "results": payload["results"]}).encode()
+    submission = {
+        "metadata": payload["metadata"],
+        "results": payload["results"],
+        "source_code": payload.get("cpp_source", "")
+    }
+    data = json.dumps(submission).encode()
     req = urllib.request.Request(
         f"{server_url}/api/submit", data=data,
-        headers={"Content-Type": "application/json"}, method="POST",
+        headers={
+            "Content-Type": "application/json",
+            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        },
+        method="POST",
     )
     try:
         with urllib.request.urlopen(req, timeout=60) as resp:
@@ -90,6 +99,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Evaluate a Vulcan heuristic and submit to leaderboard")
     parser.add_argument("input", help=".cpp heuristic file (evaluate mode) or results .json (submit mode)")
     parser.add_argument("--submit", action="store_true", help="Submit a previously saved results .json file")
+    parser.add_argument("--parallel", action="store_true", help="Run all simulations in parallel")
     parser.add_argument("--server", default=DEFAULT_SERVER)
     args = parser.parse_args()
 
@@ -105,11 +115,14 @@ if __name__ == "__main__":
         sys.exit(0)
 
     # --- evaluate path ---
+    print(f"\n[full_eval] Loading heuristic from {args.input}")
     with open(args.input) as f:
         cpp_source = f.read()
 
-    results = score_full(cpp_source)
     basename = os.path.splitext(os.path.basename(args.input))[0]
+    print(f"[full_eval] Starting full evaluation for {basename}...\n")
+
+    results = score_full(cpp_source, parallel=args.parallel)
     print_results_table(results, label=f"Results for {basename}")
 
     metadata = {"submitter_name": "", "group_name": "", "heuristic_name": basename,

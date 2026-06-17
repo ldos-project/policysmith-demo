@@ -14,6 +14,8 @@ Non-compiling / crashing code scores 0.0. Rebuild-in-place (no .so plugin).
 import os
 import json
 import subprocess
+from concurrent.futures import ThreadPoolExecutor, as_completed
+import threading
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 TRACE_DIR = os.path.join(HERE, "traces")
@@ -60,12 +62,12 @@ def _build() -> tuple[bool, str]:
     return True, ""
 
 
-def _run(trace_name: str, cache_size: float) -> float:
-    """Run one simulation; return byte hit rate, or 0.0 on crash/timeout."""
+def _run(trace_name: str, cache_size: float) -> dict:
+    """Run one simulation; return dict with obj_hit_rate and byte_hit_rate."""
     trace_path = _trace_path(trace_name)
     if not os.path.exists(trace_path):
         print(f"[evaluator] missing trace: {trace_path}")
-        return 0.0
+        return {"obj_hit_rate": 0.0, "byte_hit_rate": 0.0}
     try:
         proc = subprocess.run(
             [RUN_ALGO, trace_path, "vulcanevolve", str(cache_size)],
@@ -76,21 +78,25 @@ def _run(trace_name: str, cache_size: float) -> float:
         )
     except subprocess.TimeoutExpired:
         print(f"[evaluator] run timed out on {trace_name}@{cache_size}")
-        return 0.0
+        return {"obj_hit_rate": 0.0, "byte_hit_rate": 0.0}
     if proc.returncode != 0:
         print(f"[evaluator] run crashed on {trace_name}@{cache_size} "
               f"(rc={proc.returncode})")
-        return 0.0
+        return {"obj_hit_rate": 0.0, "byte_hit_rate": 0.0}
     # run_algo prints exactly one JSON line; logging goes to stderr.
     for line in reversed(proc.stdout.strip().splitlines()):
         line = line.strip()
         if line.startswith("{") and "byte_hit_rate" in line:
             try:
-                return float(json.loads(line)["byte_hit_rate"])
+                data = json.loads(line)
+                return {
+                    "obj_hit_rate": float(data.get("obj_hit_rate", 0.0)),
+                    "byte_hit_rate": float(data.get("byte_hit_rate", 0.0))
+                }
             except (ValueError, KeyError):
                 break
     print(f"[evaluator] could not parse byte_hit_rate on {trace_name}@{cache_size}")
-    return 0.0
+    return {"obj_hit_rate": 0.0, "byte_hit_rate": 0.0}
 
 
 def compile_check(cpp_source: str) -> tuple[bool, str]:
@@ -115,7 +121,8 @@ def evaluate(cpp_source: str, trace_name: str = "w106",
     ok, _ = _build()
     if not ok:
         return 0.0
-    return _run(trace_name, cache_size)
+    result = _run(trace_name, cache_size)
+    return result["byte_hit_rate"]
 
 
 def score(cpp_source: str) -> dict:
@@ -126,17 +133,81 @@ def score(cpp_source: str) -> dict:
     if not ok:
         return {f"{t}_{SIZE_LABELS[s]}": 0.0
                 for t in TRAIN_TRACES for s in TRAIN_SIZES}
-    return {f"{t}_{SIZE_LABELS[s]}": _run(t, s)
-            for t in TRAIN_TRACES for s in TRAIN_SIZES}
+    results = {}
+    for t in TRAIN_TRACES:
+        for s in TRAIN_SIZES:
+            key = f"{t}_{SIZE_LABELS[s]}"
+            run_result = _run(t, s)
+            results[key] = run_result["byte_hit_rate"]
+    return results
 
 
-def score_full(cpp_source: str) -> dict:
+def score_full(cpp_source: str, parallel: bool = False) -> dict:
     """Held-out score across the test traces/sizes. One build, many runs."""
+    total_runs = len(TEST_TRACES) * len(TEST_SIZES)
+    print(f"[evaluator] Writing code to {LLMCODE_H}")
     with open(LLMCODE_H, "w") as f:
         f.write(cpp_source)
+
+    print(f"[evaluator] Building heuristic...")
     ok, _ = _build()
     if not ok:
-        return {f"{t}_{SIZE_LABELS[s]}": 0.0
+        print(f"[evaluator] Build failed, returning zero scores")
+        return {f"{t}_{SIZE_LABELS[s]}": {"obj_hit_rate": 0.0, "byte_hit_rate": 0.0}
                 for t in TEST_TRACES for s in TEST_SIZES}
-    return {f"{t}_{SIZE_LABELS[s]}": _run(t, s)
-            for t in TEST_TRACES for s in TEST_SIZES}
+
+    if parallel:
+        print(f"[evaluator] Build successful! Running {total_runs} simulations in parallel...\n")
+        return _run_parallel(total_runs)
+    else:
+        print(f"[evaluator] Build successful! Running {total_runs} simulations...\n")
+        return _run_sequential(total_runs)
+
+
+def _run_sequential(total_runs: int) -> dict:
+    """Run simulations sequentially with progress updates."""
+    results = {}
+    run_count = 0
+    for t in TEST_TRACES:
+        for s in TEST_SIZES:
+            run_count += 1
+            key = f"{t}_{SIZE_LABELS[s]}"
+            print(f"[evaluator] [{run_count}/{total_runs}] Running {t} @ {SIZE_LABELS[s]} cache size...", end=" ", flush=True)
+            result = _run(t, s)
+            results[key] = result
+            print(f"byte_hit_rate = {result['byte_hit_rate']:.4f}")
+
+    print(f"\n[evaluator] All simulations complete!")
+    return results
+
+
+def _run_parallel(total_runs: int) -> dict:
+    """Run simulations in parallel with thread-safe progress updates."""
+    results = {}
+    completed_count = 0
+    lock = threading.Lock()
+
+    def run_task(t: str, s: float) -> tuple[str, dict]:
+        nonlocal completed_count
+        key = f"{t}_{SIZE_LABELS[s]}"
+        result = _run(t, s)
+
+        with lock:
+            completed_count += 1
+            print(f"[evaluator] [{completed_count}/{total_runs}] Completed {t} @ {SIZE_LABELS[s]} cache size: byte_hit_rate = {result['byte_hit_rate']:.4f}")
+
+        return key, result
+
+    # Create all tasks
+    tasks = [(t, s) for t in TEST_TRACES for s in TEST_SIZES]
+
+    # Run in parallel using ThreadPoolExecutor
+    with ThreadPoolExecutor(max_workers=os.cpu_count()) as executor:
+        futures = {executor.submit(run_task, t, s): (t, s) for t, s in tasks}
+
+        for future in as_completed(futures):
+            key, result = future.result()
+            results[key] = result
+
+    print(f"\n[evaluator] All simulations complete!")
+    return results
