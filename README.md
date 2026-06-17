@@ -16,3 +16,4 @@ Run all instructions in the root of this repository
     cd ..  
     ```
 8. Run: `python test_evaluator.py` then `python evolve.py`
+9. Use `python3 full_eval.py` to submit heuristics that you found.
