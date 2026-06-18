@@ -1,4 +1,10 @@
-# Setup instructions
+# Vulcan Tutorial at the 2026 LDOS PhD Research School
+- Link to [Google slides](https://docs.google.com/presentation/d/1OknSVNHAMNUFhOmBR4Pgj78rnCqo7dwIkefcZ9w6-Lw/edit?usp=sharing)
+- This branch (master) contains the started code used for the tutorial.
+- [leaderboard branch](https://github.com/ldos-project/vulcan-demo/tree/leaderboard): code for the live leaderboard used during the tutorial.
+- [gh-pages](https://github.com/ldos-project/vulcan-demo/tree/gh-pages): snapshot of the final leaderboard after the tutorial. Can be viewed online at: https://ldos-project.github.io/vulcan-demo/ 
+
+## Setup instructions
 
 Run all instructions in the root of this repository
 1. Clone submodules: `git submodule update --init --recursive`
@@ -24,5 +30,8 @@ Run all instructions in the root of this repository
     ```
 9. Run: `python test_evaluator.py`.
 
-# Next steps
+## Next steps
 Implement a simple evolve.py to implement heuristics, and then use `python3 full_eval.py` to evaluate the heuristic you found on all traces and submit them to be featured in the leaderboard!
+
+#  Acknowledgements
+This material is based upon work supported by the U.S. National Science Foundation (NSF) under Grant Number 2326576. Any opinions, findings and conclusions or recommendations expressed in this material do not necessarily reflect the views of the U.S. National Science Foundation. The presentor of this tutorial (Dwivedula) was also supported with an Amazon AI Fellowship
