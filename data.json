@@ -1,0 +1,3710 @@
+{
+  "submissions": [
+    {
+      "id": 5,
+      "submitter_name": "Baseline",
+      "group_name": "System",
+      "heuristic_name": "S3-FIFO",
+      "description": "S3-FIFO \u2014 small/main/ghost FIFO queues (OSDI 2023)",
+      "algo_type": "classical",
+      "submitted_at": "2026-06-17T08:06:11.737408-05:00",
+      "mrr": 1.2585069509266809,
+      "mrr_obj": 1.1717578555029255,
+      "mean_byte_hr": 0.294777,
+      "mean_obj_hr": 0.391317,
+      "results": {
+        "w86_1pct": {
+          "obj_hit_rate": 0.04968,
+          "byte_hit_rate": 0.022015
+        },
+        "w86_3pct": {
+          "obj_hit_rate": 0.051322,
+          "byte_hit_rate": 0.024222
+        },
+        "w86_10pct": {
+          "obj_hit_rate": 0.067314,
+          "byte_hit_rate": 0.068027
+        },
+        "w87_1pct": {
+          "obj_hit_rate": 0.14346,
+          "byte_hit_rate": 0.235687
+        },
+        "w87_3pct": {
+          "obj_hit_rate": 0.18028,
+          "byte_hit_rate": 0.291247
+        },
+        "w87_10pct": {
+          "obj_hit_rate": 0.249293,
+          "byte_hit_rate": 0.430834
+        },
+        "w89_1pct": {
+          "obj_hit_rate": 0.58677,
+          "byte_hit_rate": 0.468195
+        },
+        "w89_3pct": {
+          "obj_hit_rate": 0.646814,
+          "byte_hit_rate": 0.505894
+        },
+        "w89_10pct": {
+          "obj_hit_rate": 0.709901,
+          "byte_hit_rate": 0.566004
+        },
+        "w90_1pct": {
+          "obj_hit_rate": 0.224994,
+          "byte_hit_rate": 0.071464
+        },
+        "w90_3pct": {
+          "obj_hit_rate": 0.257756,
+          "byte_hit_rate": 0.097254
+        },
+        "w90_10pct": {
+          "obj_hit_rate": 0.551933,
+          "byte_hit_rate": 0.448912
+        },
+        "w93_1pct": {
+          "obj_hit_rate": 0.149694,
+          "byte_hit_rate": 0.065867
+        },
+        "w93_3pct": {
+          "obj_hit_rate": 0.173145,
+          "byte_hit_rate": 0.086273
+        },
+        "w93_10pct": {
+          "obj_hit_rate": 0.270162,
+          "byte_hit_rate": 0.187898
+        },
+        "w94_1pct": {
+          "obj_hit_rate": 0.103633,
+          "byte_hit_rate": 0.03867
+        },
+        "w94_3pct": {
+          "obj_hit_rate": 0.289539,
+          "byte_hit_rate": 0.217857
+        },
+        "w94_10pct": {
+          "obj_hit_rate": 0.528348,
+          "byte_hit_rate": 0.490314
+        },
+        "w99_1pct": {
+          "obj_hit_rate": 0.349324,
+          "byte_hit_rate": 0.065119
+        },
+        "w99_3pct": {
+          "obj_hit_rate": 0.377398,
+          "byte_hit_rate": 0.086766
+        },
+        "w99_10pct": {
+          "obj_hit_rate": 0.425452,
+          "byte_hit_rate": 0.14518
+        },
+        "w103_1pct": {
+          "obj_hit_rate": 0.671063,
+          "byte_hit_rate": 0.566633
+        },
+        "w103_3pct": {
+          "obj_hit_rate": 0.696838,
+          "byte_hit_rate": 0.61361
+        },
+        "w103_10pct": {
+          "obj_hit_rate": 0.759144,
+          "byte_hit_rate": 0.700388
+        },
+        "w105_1pct": {
+          "obj_hit_rate": 0.256193,
+          "byte_hit_rate": 0.060692
+        },
+        "w105_3pct": {
+          "obj_hit_rate": 0.274997,
+          "byte_hit_rate": 0.077658
+        },
+        "w105_10pct": {
+          "obj_hit_rate": 0.364309,
+          "byte_hit_rate": 0.148526
+        },
+        "w106_1pct": {
+          "obj_hit_rate": 0.736399,
+          "byte_hit_rate": 0.608357
+        },
+        "w106_3pct": {
+          "obj_hit_rate": 0.761924,
+          "byte_hit_rate": 0.669734
+        },
+        "w106_10pct": {
+          "obj_hit_rate": 0.83244,
+          "byte_hit_rate": 0.784023
+        }
+      },
+      "source_code": ""
+    },
+    {
+      "id": 28,
+      "submitter_name": "michael",
+      "group_name": "Sonnet + GEPA",
+      "heuristic_name": "ghost recency frequency size",
+      "description": "Ghost-aware frequency and recency policy with adaptive size penalty",
+      "algo_type": "vulcanevolve",
+      "submitted_at": "2026-06-17T15:53:31.378056-05:00",
+      "mrr": 1.156717082663071,
+      "mrr_obj": 1.1762184701044291,
+      "mean_byte_hr": 0.280947,
+      "mean_obj_hr": 0.39103,
+      "results": {
+        "w106_10pct": {
+          "obj_hit_rate": 0.828728,
+          "byte_hit_rate": 0.767901
+        },
+        "w106_1pct": {
+          "obj_hit_rate": 0.725187,
+          "byte_hit_rate": 0.585287
+        },
+        "w106_3pct": {
+          "obj_hit_rate": 0.755128,
+          "byte_hit_rate": 0.653384
+        },
+        "w103_10pct": {
+          "obj_hit_rate": 0.76078,
+          "byte_hit_rate": 0.685019
+        },
+        "w103_1pct": {
+          "obj_hit_rate": 0.669916,
+          "byte_hit_rate": 0.56236
+        },
+        "w103_3pct": {
+          "obj_hit_rate": 0.704274,
+          "byte_hit_rate": 0.600038
+        },
+        "w89_10pct": {
+          "obj_hit_rate": 0.72358,
+          "byte_hit_rate": 0.561587
+        },
+        "w89_3pct": {
+          "obj_hit_rate": 0.612983,
+          "byte_hit_rate": 0.478651
+        },
+        "w89_1pct": {
+          "obj_hit_rate": 0.570377,
+          "byte_hit_rate": 0.439781
+        },
+        "w99_10pct": {
+          "obj_hit_rate": 0.424214,
+          "byte_hit_rate": 0.086307
+        },
+        "w99_1pct": {
+          "obj_hit_rate": 0.341154,
+          "byte_hit_rate": 0.060177
+        },
+        "w90_10pct": {
+          "obj_hit_rate": 0.549919,
+          "byte_hit_rate": 0.432493
+        },
+        "w105_10pct": {
+          "obj_hit_rate": 0.363171,
+          "byte_hit_rate": 0.113414
+        },
+        "w99_3pct": {
+          "obj_hit_rate": 0.368225,
+          "byte_hit_rate": 0.074556
+        },
+        "w94_10pct": {
+          "obj_hit_rate": 0.522933,
+          "byte_hit_rate": 0.413557
+        },
+        "w105_1pct": {
+          "obj_hit_rate": 0.212685,
+          "byte_hit_rate": 0.049568
+        },
+        "w105_3pct": {
+          "obj_hit_rate": 0.274744,
+          "byte_hit_rate": 0.06907
+        },
+        "w93_10pct": {
+          "obj_hit_rate": 0.300195,
+          "byte_hit_rate": 0.124391
+        },
+        "w90_1pct": {
+          "obj_hit_rate": 0.237754,
+          "byte_hit_rate": 0.070494
+        },
+        "w93_3pct": {
+          "obj_hit_rate": 0.184607,
+          "byte_hit_rate": 0.075314
+        },
+        "w94_3pct": {
+          "obj_hit_rate": 0.310632,
+          "byte_hit_rate": 0.231104
+        },
+        "w93_1pct": {
+          "obj_hit_rate": 0.150205,
+          "byte_hit_rate": 0.060696
+        },
+        "w90_3pct": {
+          "obj_hit_rate": 0.278097,
+          "byte_hit_rate": 0.105502
+        },
+        "w87_10pct": {
+          "obj_hit_rate": 0.257941,
+          "byte_hit_rate": 0.429937
+        },
+        "w94_1pct": {
+          "obj_hit_rate": 0.082588,
+          "byte_hit_rate": 0.042401
+        },
+        "w87_1pct": {
+          "obj_hit_rate": 0.147519,
+          "byte_hit_rate": 0.238738
+        },
+        "w87_3pct": {
+          "obj_hit_rate": 0.186503,
+          "byte_hit_rate": 0.30086
+        },
+        "w86_10pct": {
+          "obj_hit_rate": 0.07502,
+          "byte_hit_rate": 0.067192
+        },
+        "w86_1pct": {
+          "obj_hit_rate": 0.053084,
+          "byte_hit_rate": 0.021365
+        },
+        "w86_3pct": {
+          "obj_hit_rate": 0.058759,
+          "byte_hit_rate": 0.02727
+        }
+      },
+      "source_code": "store_cfg.add_listeners(f_count, {vulcan::listeners::object::RollingWindow(1)});\nstore_cfg.add_listeners(f_last_access, {vulcan::listeners::object::RollingWindow(1)});\nstore_cfg.add_listeners(f_size, {vulcan::listeners::object::RollingWindow(1)});\nstore_cfg.add_listeners(f_curr_time, {vulcan::listeners::global::RollingWindow(1)});\nstore_cfg.add_listeners(f_ghost, {vulcan::listeners::global::RollingCount(20000)});\n\nauto score_fn = [&](const vulcan::feature_store &fs, int64_t obj_id) -> double {\n  int64_t count = fs.get_latest(f_count, obj_id);\n  int64_t last_access = fs.get_latest(f_last_access, obj_id);\n  int64_t size = fs.get_latest(f_size, obj_id);\n  int64_t curr_time = fs.get_latest(f_curr_time);\n\n  double recency = static_cast<double>(curr_time - last_access + 1);\n  double frequency = static_cast<double>(count);\n  double size_d = static_cast<double>(size);\n\n  bool is_ghost = fs.contains(f_ghost, obj_id);\n\n  if (count == 1) {\n    double base_score = 10000.0 / recency;\n    double size_penalty = size_d / 2048.0;\n    double ghost_bonus = is_ghost ? 50000.0 : 0.0;\n    return ghost_bonus + base_score - size_penalty;\n  }\n\n  double freq_score = std::log1p(frequency) * 8000.0;\n  double recency_score = 8000.0 / recency;\n  double freq_recency_product = frequency * 200.0 / recency;\n\n  double size_penalty = size_d / (100.0 + frequency * 50.0);\n\n  double ghost_bonus = is_ghost ? 80000.0 : 0.0;\n\n  return ghost_bonus + freq_score + recency_score + freq_recency_product - size_penalty;\n};\n"
+    },
+    {
+      "id": 4,
+      "submitter_name": "Baseline",
+      "group_name": "System",
+      "heuristic_name": "ARC",
+      "description": "Adaptive Replacement Cache \u2014 balances recency and frequency",
+      "algo_type": "classical",
+      "submitted_at": "2026-06-17T08:06:11.679156-05:00",
+      "mrr": 1.1369052879609927,
+      "mrr_obj": 1.070333859019246,
+      "mean_byte_hr": 0.275371,
+      "mean_obj_hr": 0.374278,
+      "results": {
+        "w86_1pct": {
+          "obj_hit_rate": 0.052722,
+          "byte_hit_rate": 0.021358
+        },
+        "w86_3pct": {
+          "obj_hit_rate": 0.054146,
+          "byte_hit_rate": 0.022634
+        },
+        "w86_10pct": {
+          "obj_hit_rate": 0.070135,
+          "byte_hit_rate": 0.061422
+        },
+        "w87_1pct": {
+          "obj_hit_rate": 0.121792,
+          "byte_hit_rate": 0.178453
+        },
+        "w87_3pct": {
+          "obj_hit_rate": 0.170353,
+          "byte_hit_rate": 0.266914
+        },
+        "w87_10pct": {
+          "obj_hit_rate": 0.22656,
+          "byte_hit_rate": 0.376841
+        },
+        "w89_1pct": {
+          "obj_hit_rate": 0.569887,
+          "byte_hit_rate": 0.445867
+        },
+        "w89_3pct": {
+          "obj_hit_rate": 0.622943,
+          "byte_hit_rate": 0.507512
+        },
+        "w89_10pct": {
+          "obj_hit_rate": 0.720734,
+          "byte_hit_rate": 0.578756
+        },
+        "w90_1pct": {
+          "obj_hit_rate": 0.234508,
+          "byte_hit_rate": 0.084676
+        },
+        "w90_3pct": {
+          "obj_hit_rate": 0.24883,
+          "byte_hit_rate": 0.09149
+        },
+        "w90_10pct": {
+          "obj_hit_rate": 0.544526,
+          "byte_hit_rate": 0.439202
+        },
+        "w93_1pct": {
+          "obj_hit_rate": 0.143127,
+          "byte_hit_rate": 0.064233
+        },
+        "w93_3pct": {
+          "obj_hit_rate": 0.165962,
+          "byte_hit_rate": 0.081783
+        },
+        "w93_10pct": {
+          "obj_hit_rate": 0.18856,
+          "byte_hit_rate": 0.105236
+        },
+        "w94_1pct": {
+          "obj_hit_rate": 0.035823,
+          "byte_hit_rate": 0.022249
+        },
+        "w94_3pct": {
+          "obj_hit_rate": 0.236383,
+          "byte_hit_rate": 0.176998
+        },
+        "w94_10pct": {
+          "obj_hit_rate": 0.443693,
+          "byte_hit_rate": 0.354048
+        },
+        "w99_1pct": {
+          "obj_hit_rate": 0.34523,
+          "byte_hit_rate": 0.064785
+        },
+        "w99_3pct": {
+          "obj_hit_rate": 0.387773,
+          "byte_hit_rate": 0.08365
+        },
+        "w99_10pct": {
+          "obj_hit_rate": 0.392962,
+          "byte_hit_rate": 0.085701
+        },
+        "w103_1pct": {
+          "obj_hit_rate": 0.662826,
+          "byte_hit_rate": 0.556707
+        },
+        "w103_3pct": {
+          "obj_hit_rate": 0.694376,
+          "byte_hit_rate": 0.605592
+        },
+        "w103_10pct": {
+          "obj_hit_rate": 0.751633,
+          "byte_hit_rate": 0.690316
+        },
+        "w105_1pct": {
+          "obj_hit_rate": 0.236795,
+          "byte_hit_rate": 0.057902
+        },
+        "w105_3pct": {
+          "obj_hit_rate": 0.275847,
+          "byte_hit_rate": 0.08563
+        },
+        "w105_10pct": {
+          "obj_hit_rate": 0.340615,
+          "byte_hit_rate": 0.154766
+        },
+        "w106_1pct": {
+          "obj_hit_rate": 0.729426,
+          "byte_hit_rate": 0.604276
+        },
+        "w106_3pct": {
+          "obj_hit_rate": 0.740008,
+          "byte_hit_rate": 0.626914
+        },
+        "w106_10pct": {
+          "obj_hit_rate": 0.82016,
+          "byte_hit_rate": 0.765227
+        }
+      },
+      "source_code": ""
+    },
+    {
+      "id": 27,
+      "submitter_name": "wanyu.zhao",
+      "group_name": "wz56",
+      "heuristic_name": "finance-gdsf-evolved",
+      "description": "Evolved finance-framed policy: access-rate x recency-decay x size-penalty x ghost-readmission boost",
+      "algo_type": "vulcanevolve",
+      "submitted_at": "2026-06-17T14:21:53.802299-05:00",
+      "mrr": 1.1107328708745643,
+      "mrr_obj": 1.0914607829135674,
+      "mean_byte_hr": 0.278226,
+      "mean_obj_hr": 0.377122,
+      "results": {
+        "w105_1pct": {
+          "obj_hit_rate": 0.206424,
+          "byte_hit_rate": 0.049045
+        },
+        "w105_10pct": {
+          "obj_hit_rate": 0.325783,
+          "byte_hit_rate": 0.103321
+        },
+        "w105_3pct": {
+          "obj_hit_rate": 0.239562,
+          "byte_hit_rate": 0.062085
+        },
+        "w87_1pct": {
+          "obj_hit_rate": 0.148768,
+          "byte_hit_rate": 0.257866
+        },
+        "w87_10pct": {
+          "obj_hit_rate": 0.241605,
+          "byte_hit_rate": 0.402905
+        },
+        "w87_3pct": {
+          "obj_hit_rate": 0.182791,
+          "byte_hit_rate": 0.308789
+        },
+        "w89_1pct": {
+          "obj_hit_rate": 0.571109,
+          "byte_hit_rate": 0.437601
+        },
+        "w89_3pct": {
+          "obj_hit_rate": 0.597675,
+          "byte_hit_rate": 0.472211
+        },
+        "w86_3pct": {
+          "obj_hit_rate": 0.05388,
+          "byte_hit_rate": 0.022613
+        },
+        "w86_1pct": {
+          "obj_hit_rate": 0.050564,
+          "byte_hit_rate": 0.020282
+        },
+        "w93_3pct": {
+          "obj_hit_rate": 0.153728,
+          "byte_hit_rate": 0.065704
+        },
+        "w93_1pct": {
+          "obj_hit_rate": 0.141267,
+          "byte_hit_rate": 0.056267
+        },
+        "w93_10pct": {
+          "obj_hit_rate": 0.207218,
+          "byte_hit_rate": 0.108138
+        },
+        "w103_1pct": {
+          "obj_hit_rate": 0.670214,
+          "byte_hit_rate": 0.560709
+        },
+        "w89_10pct": {
+          "obj_hit_rate": 0.702202,
+          "byte_hit_rate": 0.557461
+        },
+        "w103_3pct": {
+          "obj_hit_rate": 0.706959,
+          "byte_hit_rate": 0.600574
+        },
+        "w103_10pct": {
+          "obj_hit_rate": 0.757563,
+          "byte_hit_rate": 0.686162
+        },
+        "w106_1pct": {
+          "obj_hit_rate": 0.731898,
+          "byte_hit_rate": 0.590993
+        },
+        "w86_10pct": {
+          "obj_hit_rate": 0.071374,
+          "byte_hit_rate": 0.065528
+        },
+        "w106_3pct": {
+          "obj_hit_rate": 0.757864,
+          "byte_hit_rate": 0.638598
+        },
+        "w94_10pct": {
+          "obj_hit_rate": 0.508575,
+          "byte_hit_rate": 0.420802
+        },
+        "w106_10pct": {
+          "obj_hit_rate": 0.82842,
+          "byte_hit_rate": 0.764267
+        },
+        "w94_3pct": {
+          "obj_hit_rate": 0.305046,
+          "byte_hit_rate": 0.237774
+        },
+        "w90_10pct": {
+          "obj_hit_rate": 0.53378,
+          "byte_hit_rate": 0.441491
+        },
+        "w94_1pct": {
+          "obj_hit_rate": 0.053436,
+          "byte_hit_rate": 0.037163
+        },
+        "w90_1pct": {
+          "obj_hit_rate": 0.228262,
+          "byte_hit_rate": 0.067492
+        },
+        "w90_3pct": {
+          "obj_hit_rate": 0.261202,
+          "byte_hit_rate": 0.09839
+        },
+        "w99_1pct": {
+          "obj_hit_rate": 0.335546,
+          "byte_hit_rate": 0.060614
+        },
+        "w99_3pct": {
+          "obj_hit_rate": 0.358303,
+          "byte_hit_rate": 0.071436
+        },
+        "w99_10pct": {
+          "obj_hit_rate": 0.382654,
+          "byte_hit_rate": 0.080489
+        }
+      },
+      "source_code": "store_cfg.add_listeners(f_last_access, {vulcan::listeners::object::RollingWindow(1)});\nstore_cfg.add_listeners(f_count, {vulcan::listeners::object::RollingWindow(1)});\nstore_cfg.add_listeners(f_size, {vulcan::listeners::object::RollingWindow(1)});\nstore_cfg.add_listeners(f_curr_time, {vulcan::listeners::global::RollingWindow(1)});\nstore_cfg.add_listeners(f_ghost, {vulcan::listeners::global::RollingCount(3500)});\nstore_cfg.add_listeners(f_insertion_time, {vulcan::listeners::object::RollingWindow(1)});\n\nauto score_fn = [&](const vulcan::feature_store &fs, int64_t obj_id) -> double {\n  double curr_time = static_cast<double>(fs.get_latest(f_curr_time));\n  double last_access = static_cast<double>(fs.get_latest(f_last_access, obj_id));\n  double insertion_time = static_cast<double>(fs.get_latest(f_insertion_time, obj_id));\n  double access_count = static_cast<double>(fs.get_latest(f_count, obj_id));\n  double size = static_cast<double>(fs.get_latest(f_size, obj_id));\n  \n  double age = curr_time - last_access;\n  double lifetime = curr_time - insertion_time + 1.0;\n  \n  // S3FIFO: kill one-hit wonders with tuned threshold\n  if (access_count <= 1.0 && age > 1800.0) {\n    return -age * 1.5;\n  }\n  \n  // Hyperbolic access rate\n  double access_rate = access_count / lifetime;\n  \n  // GDSF: frequency per byte with log dampening for very large objects\n  double size_factor = std::log1p(size / 1000.0);\n  double freq_per_byte = access_count / (size_factor + 1.0);\n  \n  // Adaptive recency decay\n  double recency_score = 1.0 / (1.0 + age / 2800.0);\n  \n  // Ghost readmission boost\n  double ghost_multiplier = fs.contains(f_ghost, obj_id) ? 3.5 : 1.0;\n  \n  // Multi-access proven value\n  double proven_multiplier = (access_count >= 2.0) ? 2.2 : 1.0;\n  \n  // Frequency momentum: recent high-frequency objects get extra boost\n  double freq_bonus = (access_count >= 3.0 && age < 1000.0) ? 1.3 : 1.0;\n  \n  // Balanced score: optimize weights for access rate vs freq-per-byte\n  double base_score = (access_rate * 2500.0 + freq_per_byte * 550000.0 + std::log1p(access_count) * 120.0);\n  \n  double final_score = base_score \n                       * recency_score \n                       * ghost_multiplier \n                       * proven_multiplier\n                       * freq_bonus;\n  \n  return final_score;\n};"
+    },
+    {
+      "id": 7,
+      "submitter_name": "Baseline",
+      "group_name": "System",
+      "heuristic_name": "SIEVE",
+      "description": "SIEVE \u2014 simple and efficient eviction algorithm (NSDI 2024)",
+      "algo_type": "classical",
+      "submitted_at": "2026-06-17T08:06:12.019668-05:00",
+      "mrr": 1.0782988582999655,
+      "mrr_obj": 1.0840335496082232,
+      "mean_byte_hr": 0.263277,
+      "mean_obj_hr": 0.37421,
+      "results": {
+        "w86_1pct": {
+          "obj_hit_rate": 0.052167,
+          "byte_hit_rate": 0.021067
+        },
+        "w86_3pct": {
+          "obj_hit_rate": 0.054016,
+          "byte_hit_rate": 0.022511
+        },
+        "w86_10pct": {
+          "obj_hit_rate": 0.069946,
+          "byte_hit_rate": 0.061303
+        },
+        "w87_1pct": {
+          "obj_hit_rate": 0.133218,
+          "byte_hit_rate": 0.221395
+        },
+        "w87_3pct": {
+          "obj_hit_rate": 0.168755,
+          "byte_hit_rate": 0.275318
+        },
+        "w87_10pct": {
+          "obj_hit_rate": 0.234874,
+          "byte_hit_rate": 0.390969
+        },
+        "w89_1pct": {
+          "obj_hit_rate": 0.592247,
+          "byte_hit_rate": 0.448233
+        },
+        "w89_3pct": {
+          "obj_hit_rate": 0.637049,
+          "byte_hit_rate": 0.493335
+        },
+        "w89_10pct": {
+          "obj_hit_rate": 0.722755,
+          "byte_hit_rate": 0.572162
+        },
+        "w90_1pct": {
+          "obj_hit_rate": 0.21771,
+          "byte_hit_rate": 0.066449
+        },
+        "w90_3pct": {
+          "obj_hit_rate": 0.263207,
+          "byte_hit_rate": 0.097074
+        },
+        "w90_10pct": {
+          "obj_hit_rate": 0.328531,
+          "byte_hit_rate": 0.161815
+        },
+        "w93_1pct": {
+          "obj_hit_rate": 0.155829,
+          "byte_hit_rate": 0.066467
+        },
+        "w93_3pct": {
+          "obj_hit_rate": 0.173222,
+          "byte_hit_rate": 0.082146
+        },
+        "w93_10pct": {
+          "obj_hit_rate": 0.230558,
+          "byte_hit_rate": 0.120191
+        },
+        "w94_1pct": {
+          "obj_hit_rate": 0.040735,
+          "byte_hit_rate": 0.014474
+        },
+        "w94_3pct": {
+          "obj_hit_rate": 0.212481,
+          "byte_hit_rate": 0.145674
+        },
+        "w94_10pct": {
+          "obj_hit_rate": 0.473584,
+          "byte_hit_rate": 0.368679
+        },
+        "w99_1pct": {
+          "obj_hit_rate": 0.352759,
+          "byte_hit_rate": 0.061637
+        },
+        "w99_3pct": {
+          "obj_hit_rate": 0.382563,
+          "byte_hit_rate": 0.082427
+        },
+        "w99_10pct": {
+          "obj_hit_rate": 0.390758,
+          "byte_hit_rate": 0.084811
+        },
+        "w103_1pct": {
+          "obj_hit_rate": 0.668492,
+          "byte_hit_rate": 0.564259
+        },
+        "w103_3pct": {
+          "obj_hit_rate": 0.70147,
+          "byte_hit_rate": 0.605202
+        },
+        "w103_10pct": {
+          "obj_hit_rate": 0.760042,
+          "byte_hit_rate": 0.70081
+        },
+        "w105_1pct": {
+          "obj_hit_rate": 0.25654,
+          "byte_hit_rate": 0.057762
+        },
+        "w105_3pct": {
+          "obj_hit_rate": 0.290213,
+          "byte_hit_rate": 0.076227
+        },
+        "w105_10pct": {
+          "obj_hit_rate": 0.342055,
+          "byte_hit_rate": 0.109461
+        },
+        "w106_1pct": {
+          "obj_hit_rate": 0.729433,
+          "byte_hit_rate": 0.581074
+        },
+        "w106_3pct": {
+          "obj_hit_rate": 0.77285,
+          "byte_hit_rate": 0.629022
+        },
+        "w106_10pct": {
+          "obj_hit_rate": 0.818229,
+          "byte_hit_rate": 0.716362
+        }
+      },
+      "source_code": ""
+    },
+    {
+      "id": 23,
+      "submitter_name": "Codex",
+      "group_name": "",
+      "heuristic_name": "count_lru_fast",
+      "description": "Fast capped-count LRU with no timeout scenarios",
+      "algo_type": "vulcanevolve",
+      "submitted_at": "2026-06-17T12:15:56.603004-05:00",
+      "mrr": 1.048807664099518,
+      "mrr_obj": 1.0364581295501565,
+      "mean_byte_hr": 0.272962,
+      "mean_obj_hr": 0.365864,
+      "results": {
+        "w106_10pct": {
+          "obj_hit_rate": 0.813626,
+          "byte_hit_rate": 0.764707
+        },
+        "w106_1pct": {
+          "obj_hit_rate": 0.728591,
+          "byte_hit_rate": 0.588127
+        },
+        "w106_3pct": {
+          "obj_hit_rate": 0.752886,
+          "byte_hit_rate": 0.639002
+        },
+        "w103_10pct": {
+          "obj_hit_rate": 0.748756,
+          "byte_hit_rate": 0.682657
+        },
+        "w103_3pct": {
+          "obj_hit_rate": 0.70241,
+          "byte_hit_rate": 0.602514
+        },
+        "w103_1pct": {
+          "obj_hit_rate": 0.66643,
+          "byte_hit_rate": 0.561348
+        },
+        "w89_10pct": {
+          "obj_hit_rate": 0.669065,
+          "byte_hit_rate": 0.546316
+        },
+        "w89_3pct": {
+          "obj_hit_rate": 0.598439,
+          "byte_hit_rate": 0.476843
+        },
+        "w89_1pct": {
+          "obj_hit_rate": 0.568234,
+          "byte_hit_rate": 0.437411
+        },
+        "w99_1pct": {
+          "obj_hit_rate": 0.335048,
+          "byte_hit_rate": 0.060842
+        },
+        "w90_10pct": {
+          "obj_hit_rate": 0.536551,
+          "byte_hit_rate": 0.443894
+        },
+        "w94_10pct": {
+          "obj_hit_rate": 0.486305,
+          "byte_hit_rate": 0.414579
+        },
+        "w99_3pct": {
+          "obj_hit_rate": 0.350529,
+          "byte_hit_rate": 0.069991
+        },
+        "w99_10pct": {
+          "obj_hit_rate": 0.355361,
+          "byte_hit_rate": 0.07132
+        },
+        "w105_1pct": {
+          "obj_hit_rate": 0.206417,
+          "byte_hit_rate": 0.049261
+        },
+        "w105_10pct": {
+          "obj_hit_rate": 0.255562,
+          "byte_hit_rate": 0.085076
+        },
+        "w105_3pct": {
+          "obj_hit_rate": 0.220751,
+          "byte_hit_rate": 0.059706
+        },
+        "w93_1pct": {
+          "obj_hit_rate": 0.139114,
+          "byte_hit_rate": 0.055701
+        },
+        "w93_3pct": {
+          "obj_hit_rate": 0.145685,
+          "byte_hit_rate": 0.062105
+        },
+        "w93_10pct": {
+          "obj_hit_rate": 0.172596,
+          "byte_hit_rate": 0.086048
+        },
+        "w94_3pct": {
+          "obj_hit_rate": 0.291935,
+          "byte_hit_rate": 0.234162
+        },
+        "w87_10pct": {
+          "obj_hit_rate": 0.227021,
+          "byte_hit_rate": 0.367036
+        },
+        "w90_1pct": {
+          "obj_hit_rate": 0.223564,
+          "byte_hit_rate": 0.068664
+        },
+        "w90_3pct": {
+          "obj_hit_rate": 0.255798,
+          "byte_hit_rate": 0.09657
+        },
+        "w87_3pct": {
+          "obj_hit_rate": 0.1795,
+          "byte_hit_rate": 0.303212
+        },
+        "w87_1pct": {
+          "obj_hit_rate": 0.142121,
+          "byte_hit_rate": 0.244938
+        },
+        "w94_1pct": {
+          "obj_hit_rate": 0.049941,
+          "byte_hit_rate": 0.033472
+        },
+        "w86_1pct": {
+          "obj_hit_rate": 0.045143,
+          "byte_hit_rate": 0.018796
+        },
+        "w86_3pct": {
+          "obj_hit_rate": 0.046926,
+          "byte_hit_rate": 0.01983
+        },
+        "w86_10pct": {
+          "obj_hit_rate": 0.061615,
+          "byte_hit_rate": 0.044743
+        }
+      },
+      "source_code": "store_cfg.add_listeners(f_last_access, {vulcan::listeners::object::RollingWindow(1)});\nstore_cfg.add_listeners(f_count, {vulcan::listeners::object::RollingWindow(1)});\n\nauto score_fn = [&](const vulcan::feature_store &fs, int64_t obj_id) -> double {\n  double score = static_cast<double>(fs.get_latest(f_last_access, obj_id));\n  int64_t count_i = fs.get_latest(f_count, obj_id);\n\n  if (count_i > 6) count_i = 6;\n  if (count_i > 1) {\n    score += static_cast<double>(count_i - 1) * 30000.0;\n  }\n\n  return score;\n};\n"
+    },
+    {
+      "id": 22,
+      "submitter_name": "wanyu.zhao",
+      "group_name": "wz56",
+      "heuristic_name": "finance-gdsf-evolved",
+      "description": "Evolved finance-framed policy: access-rate x recency-decay x size-penalty x ghost-readmission boost",
+      "algo_type": "vulcanevolve",
+      "submitted_at": "2026-06-17T12:06:20.286901-05:00",
+      "mrr": 1.045749112926976,
+      "mrr_obj": 1.1120710572366022,
+      "mean_byte_hr": 0.270501,
+      "mean_obj_hr": 0.381764,
+      "results": {
+        "w105_1pct": {
+          "obj_hit_rate": 0.209231,
+          "byte_hit_rate": 0.047866
+        },
+        "w105_10pct": {
+          "obj_hit_rate": 0.294241,
+          "byte_hit_rate": 0.087328
+        },
+        "w105_3pct": {
+          "obj_hit_rate": 0.224944,
+          "byte_hit_rate": 0.058128
+        },
+        "w87_10pct": {
+          "obj_hit_rate": 0.242086,
+          "byte_hit_rate": 0.363115
+        },
+        "w87_1pct": {
+          "obj_hit_rate": 0.172793,
+          "byte_hit_rate": 0.28382
+        },
+        "w87_3pct": {
+          "obj_hit_rate": 0.203041,
+          "byte_hit_rate": 0.318633
+        },
+        "w89_1pct": {
+          "obj_hit_rate": 0.573665,
+          "byte_hit_rate": 0.433599
+        },
+        "w86_1pct": {
+          "obj_hit_rate": 0.0458,
+          "byte_hit_rate": 0.01892
+        },
+        "w86_3pct": {
+          "obj_hit_rate": 0.050269,
+          "byte_hit_rate": 0.020653
+        },
+        "w89_3pct": {
+          "obj_hit_rate": 0.611998,
+          "byte_hit_rate": 0.460166
+        },
+        "w93_1pct": {
+          "obj_hit_rate": 0.141501,
+          "byte_hit_rate": 0.0544
+        },
+        "w93_10pct": {
+          "obj_hit_rate": 0.212915,
+          "byte_hit_rate": 0.087144
+        },
+        "w89_10pct": {
+          "obj_hit_rate": 0.72417,
+          "byte_hit_rate": 0.544739
+        },
+        "w103_1pct": {
+          "obj_hit_rate": 0.677933,
+          "byte_hit_rate": 0.55618
+        },
+        "w93_3pct": {
+          "obj_hit_rate": 0.152974,
+          "byte_hit_rate": 0.060754
+        },
+        "w103_3pct": {
+          "obj_hit_rate": 0.716096,
+          "byte_hit_rate": 0.590563
+        },
+        "w103_10pct": {
+          "obj_hit_rate": 0.772351,
+          "byte_hit_rate": 0.665542
+        },
+        "w106_1pct": {
+          "obj_hit_rate": 0.72358,
+          "byte_hit_rate": 0.554552
+        },
+        "w86_10pct": {
+          "obj_hit_rate": 0.064512,
+          "byte_hit_rate": 0.043313
+        },
+        "w94_10pct": {
+          "obj_hit_rate": 0.521062,
+          "byte_hit_rate": 0.419711
+        },
+        "w90_10pct": {
+          "obj_hit_rate": 0.554894,
+          "byte_hit_rate": 0.438329
+        },
+        "w106_10pct": {
+          "obj_hit_rate": 0.830503,
+          "byte_hit_rate": 0.755827
+        },
+        "w106_3pct": {
+          "obj_hit_rate": 0.75477,
+          "byte_hit_rate": 0.626057
+        },
+        "w94_1pct": {
+          "obj_hit_rate": 0.075184,
+          "byte_hit_rate": 0.040849
+        },
+        "w94_3pct": {
+          "obj_hit_rate": 0.32369,
+          "byte_hit_rate": 0.229364
+        },
+        "w90_1pct": {
+          "obj_hit_rate": 0.233418,
+          "byte_hit_rate": 0.062662
+        },
+        "w90_3pct": {
+          "obj_hit_rate": 0.282972,
+          "byte_hit_rate": 0.091011
+        },
+        "w99_1pct": {
+          "obj_hit_rate": 0.343208,
+          "byte_hit_rate": 0.060146
+        },
+        "w99_3pct": {
+          "obj_hit_rate": 0.354044,
+          "byte_hit_rate": 0.069397
+        },
+        "w99_10pct": {
+          "obj_hit_rate": 0.365069,
+          "byte_hit_rate": 0.072258
+        }
+      },
+      "source_code": "store_cfg.add_listeners(f_last_access, {vulcan::listeners::object::RollingWindow(1)});\nstore_cfg.add_listeners(f_count, {vulcan::listeners::object::RollingWindow(1)});\nstore_cfg.add_listeners(f_size, {vulcan::listeners::object::RollingWindow(1)});\nstore_cfg.add_listeners(f_curr_time, {vulcan::listeners::global::RollingWindow(1)});\nstore_cfg.add_listeners(f_ghost, {vulcan::listeners::global::RollingCount(2000)});\nstore_cfg.add_listeners(f_insertion_time, {vulcan::listeners::object::RollingWindow(1)});\n\nauto score_fn = [&](const vulcan::feature_store &fs, int64_t obj_id) -> double {\n  double curr_time = static_cast<double>(fs.get_latest(f_curr_time));\n  double last_access = static_cast<double>(fs.get_latest(f_last_access, obj_id));\n  double insertion_time = static_cast<double>(fs.get_latest(f_insertion_time, obj_id));\n  double age = curr_time - last_access;\n  double lifetime = curr_time - insertion_time;\n  \n  double access_count = static_cast<double>(fs.get_latest(f_count, obj_id));\n  double size = static_cast<double>(fs.get_latest(f_size, obj_id));\n  \n  // Risk-adjusted frequency: dividend yield = accesses per unit time\n  double access_rate = (lifetime > 0) ? (access_count / lifetime) : access_count;\n  \n  // Momentum: stronger decay for older accesses\n  double recency_score = 1.0 / (1.0 + age / 5000.0);\n  \n  // Size-adjusted return: favor high frequency with lower size penalty\n  double size_penalty = 1000.0 / std::sqrt(size + 1.0);\n  \n  // Stop-loss override: readmission is a strong buy signal\n  double readmission_multiplier = fs.contains(f_ghost, obj_id) ? 5.0 : 1.0;\n  \n  // Sharpe-like ratio: frequency and recency are returns, size is risk\n  double risk_adjusted_score = (access_rate * 1000.0 + std::log1p(access_count) * 2.0) \n                                * recency_score \n                                * size_penalty \n                                * readmission_multiplier;\n  \n  return risk_adjusted_score;\n};"
+    },
+    {
+      "id": 9,
+      "submitter_name": "Rohit",
+      "group_name": "",
+      "heuristic_name": "Evolved LRU",
+      "description": "LRU, but as a Vulcan function",
+      "algo_type": "vulcanevolve",
+      "submitted_at": "2026-06-17T08:09:40.593991-05:00",
+      "mrr": 1.0319917792940274,
+      "mrr_obj": 1.0167166461301094,
+      "mean_byte_hr": 0.269001,
+      "mean_obj_hr": 0.359615,
+      "results": {
+        "w106_1pct": {
+          "obj_hit_rate": 0.709967,
+          "byte_hit_rate": 0.557703
+        },
+        "w106_3pct": {
+          "obj_hit_rate": 0.7397,
+          "byte_hit_rate": 0.618369
+        },
+        "w106_10pct": {
+          "obj_hit_rate": 0.806893,
+          "byte_hit_rate": 0.756923
+        },
+        "w103_1pct": {
+          "obj_hit_rate": 0.655004,
+          "byte_hit_rate": 0.554164
+        },
+        "w103_10pct": {
+          "obj_hit_rate": 0.746884,
+          "byte_hit_rate": 0.67688
+        },
+        "w103_3pct": {
+          "obj_hit_rate": 0.693116,
+          "byte_hit_rate": 0.594329
+        },
+        "w89_10pct": {
+          "obj_hit_rate": 0.656707,
+          "byte_hit_rate": 0.537046
+        },
+        "w89_1pct": {
+          "obj_hit_rate": 0.56419,
+          "byte_hit_rate": 0.434941
+        },
+        "w89_3pct": {
+          "obj_hit_rate": 0.591707,
+          "byte_hit_rate": 0.457361
+        },
+        "w99_3pct": {
+          "obj_hit_rate": 0.34912,
+          "byte_hit_rate": 0.069606
+        },
+        "w90_10pct": {
+          "obj_hit_rate": 0.531055,
+          "byte_hit_rate": 0.43733
+        },
+        "w99_1pct": {
+          "obj_hit_rate": 0.328385,
+          "byte_hit_rate": 0.058854
+        },
+        "w105_10pct": {
+          "obj_hit_rate": 0.247151,
+          "byte_hit_rate": 0.082926
+        },
+        "w99_10pct": {
+          "obj_hit_rate": 0.354384,
+          "byte_hit_rate": 0.070867
+        },
+        "w105_3pct": {
+          "obj_hit_rate": 0.218674,
+          "byte_hit_rate": 0.059097
+        },
+        "w93_3pct": {
+          "obj_hit_rate": 0.143297,
+          "byte_hit_rate": 0.060729
+        },
+        "w93_1pct": {
+          "obj_hit_rate": 0.135393,
+          "byte_hit_rate": 0.054271
+        },
+        "w105_1pct": {
+          "obj_hit_rate": 0.204367,
+          "byte_hit_rate": 0.048664
+        },
+        "w87_10pct": {
+          "obj_hit_rate": 0.223615,
+          "byte_hit_rate": 0.362305
+        },
+        "w90_3pct": {
+          "obj_hit_rate": 0.245961,
+          "byte_hit_rate": 0.087836
+        },
+        "w94_10pct": {
+          "obj_hit_rate": 0.458576,
+          "byte_hit_rate": 0.401364
+        },
+        "w93_10pct": {
+          "obj_hit_rate": 0.171869,
+          "byte_hit_rate": 0.085468
+        },
+        "w90_1pct": {
+          "obj_hit_rate": 0.217736,
+          "byte_hit_rate": 0.06434
+        },
+        "w94_1pct": {
+          "obj_hit_rate": 0.046104,
+          "byte_hit_rate": 0.0371
+        },
+        "w94_3pct": {
+          "obj_hit_rate": 0.252914,
+          "byte_hit_rate": 0.20223
+        },
+        "w87_3pct": {
+          "obj_hit_rate": 0.182716,
+          "byte_hit_rate": 0.320197
+        },
+        "w87_1pct": {
+          "obj_hit_rate": 0.161757,
+          "byte_hit_rate": 0.296702
+        },
+        "w86_1pct": {
+          "obj_hit_rate": 0.044113,
+          "byte_hit_rate": 0.018568
+        },
+        "w86_3pct": {
+          "obj_hit_rate": 0.046079,
+          "byte_hit_rate": 0.019546
+        },
+        "w86_10pct": {
+          "obj_hit_rate": 0.061024,
+          "byte_hit_rate": 0.044317
+        }
+      },
+      "source_code": "/**\n * The seed policy (LRU): score each object by its most\n * recent access time; the cache evicts the smallest-scored (least-recently\n * accessed).\n *\n * This snippet does exactly two things:\n *   1. attach listeners to the features it reads\n *   2. define `score_fn` \u2014 that scores a SINGLE object in cache. \n * These scores are used to rank eviction candidates and the object with \n * the minimum numeric score is evicted.\n */\n\nstore_cfg.add_listeners(f_last_access, {vulcan::listeners::object::RollingWindow(1)});\nauto score_fn = [&](const vulcan::feature_store &fs, int64_t obj_id) -> double {\n  return static_cast<double>(fs.get_latest(f_last_access, obj_id));\n};\n"
+    },
+    {
+      "id": 12,
+      "submitter_name": "Hongyu",
+      "group_name": "Opus4.8",
+      "heuristic_name": "VibeCache",
+      "description": "Vibed cache policy",
+      "algo_type": "vulcanevolve",
+      "submitted_at": "2026-06-17T11:15:23.599036-05:00",
+      "mrr": 1.031911218089108,
+      "mrr_obj": 1.0167452357922033,
+      "mean_byte_hr": 0.269024,
+      "mean_obj_hr": 0.359623,
+      "results": {
+        "w106_10pct": {
+          "obj_hit_rate": 0.806816,
+          "byte_hit_rate": 0.757125
+        },
+        "w106_1pct": {
+          "obj_hit_rate": 0.709979,
+          "byte_hit_rate": 0.557823
+        },
+        "w106_3pct": {
+          "obj_hit_rate": 0.739759,
+          "byte_hit_rate": 0.618368
+        },
+        "w103_10pct": {
+          "obj_hit_rate": 0.746926,
+          "byte_hit_rate": 0.677217
+        },
+        "w103_3pct": {
+          "obj_hit_rate": 0.693079,
+          "byte_hit_rate": 0.594348
+        },
+        "w103_1pct": {
+          "obj_hit_rate": 0.654843,
+          "byte_hit_rate": 0.553929
+        },
+        "w89_10pct": {
+          "obj_hit_rate": 0.656974,
+          "byte_hit_rate": 0.537016
+        },
+        "w89_3pct": {
+          "obj_hit_rate": 0.591845,
+          "byte_hit_rate": 0.457913
+        },
+        "w89_1pct": {
+          "obj_hit_rate": 0.564204,
+          "byte_hit_rate": 0.434657
+        },
+        "w99_1pct": {
+          "obj_hit_rate": 0.328431,
+          "byte_hit_rate": 0.058945
+        },
+        "w99_3pct": {
+          "obj_hit_rate": 0.349111,
+          "byte_hit_rate": 0.069577
+        },
+        "w90_10pct": {
+          "obj_hit_rate": 0.530906,
+          "byte_hit_rate": 0.437408
+        },
+        "w93_1pct": {
+          "obj_hit_rate": 0.13539,
+          "byte_hit_rate": 0.054261
+        },
+        "w99_10pct": {
+          "obj_hit_rate": 0.35439,
+          "byte_hit_rate": 0.070888
+        },
+        "w94_10pct": {
+          "obj_hit_rate": 0.458652,
+          "byte_hit_rate": 0.401475
+        },
+        "w105_10pct": {
+          "obj_hit_rate": 0.247135,
+          "byte_hit_rate": 0.082975
+        },
+        "w105_1pct": {
+          "obj_hit_rate": 0.204357,
+          "byte_hit_rate": 0.048662
+        },
+        "w93_3pct": {
+          "obj_hit_rate": 0.143334,
+          "byte_hit_rate": 0.060753
+        },
+        "w105_3pct": {
+          "obj_hit_rate": 0.218708,
+          "byte_hit_rate": 0.059102
+        },
+        "w90_1pct": {
+          "obj_hit_rate": 0.21756,
+          "byte_hit_rate": 0.064022
+        },
+        "w87_10pct": {
+          "obj_hit_rate": 0.223553,
+          "byte_hit_rate": 0.362146
+        },
+        "w93_10pct": {
+          "obj_hit_rate": 0.171855,
+          "byte_hit_rate": 0.085438
+        },
+        "w90_3pct": {
+          "obj_hit_rate": 0.245953,
+          "byte_hit_rate": 0.087811
+        },
+        "w94_3pct": {
+          "obj_hit_rate": 0.253059,
+          "byte_hit_rate": 0.202307
+        },
+        "w87_3pct": {
+          "obj_hit_rate": 0.182755,
+          "byte_hit_rate": 0.320314
+        },
+        "w94_1pct": {
+          "obj_hit_rate": 0.046126,
+          "byte_hit_rate": 0.037144
+        },
+        "w87_1pct": {
+          "obj_hit_rate": 0.161769,
+          "byte_hit_rate": 0.296711
+        },
+        "w86_1pct": {
+          "obj_hit_rate": 0.044082,
+          "byte_hit_rate": 0.018541
+        },
+        "w86_3pct": {
+          "obj_hit_rate": 0.046079,
+          "byte_hit_rate": 0.019547
+        },
+        "w86_10pct": {
+          "obj_hit_rate": 0.061059,
+          "byte_hit_rate": 0.044297
+        }
+      },
+      "source_code": "/**\n * The seed policy (LRU): score each object by its most\n * recent access time; the cache evicts the smallest-scored (least-recently\n * accessed).\n *\n * This snippet does exactly two things:\n *   1. attach listeners to the features it reads\n *   2. define `score_fn` \u2014 that scores a SINGLE object in cache. \n * These scores are used to rank eviction candidates and the object with \n * the minimum numeric score is evicted.\n */\n\nstore_cfg.add_listeners(f_last_access, {vulcan::listeners::object::RollingWindow(1)});\nauto score_fn = [&](const vulcan::feature_store &fs, int64_t obj_id) -> double {\n  return static_cast<double>(fs.get_latest(f_last_access, obj_id));\n};\n"
+    },
+    {
+      "id": 13,
+      "submitter_name": "Xiangyu",
+      "group_name": "",
+      "heuristic_name": "@@",
+      "description": "New submit",
+      "algo_type": "vulcanevolve",
+      "submitted_at": "2026-06-17T11:15:43.698382-05:00",
+      "mrr": 1.031901848101636,
+      "mrr_obj": 1.0167537539422,
+      "mean_byte_hr": 0.268996,
+      "mean_obj_hr": 0.359632,
+      "results": {
+        "w106_10pct": {
+          "obj_hit_rate": 0.806851,
+          "byte_hit_rate": 0.757082
+        },
+        "w106_3pct": {
+          "obj_hit_rate": 0.739706,
+          "byte_hit_rate": 0.618189
+        },
+        "w106_1pct": {
+          "obj_hit_rate": 0.710056,
+          "byte_hit_rate": 0.558074
+        },
+        "w103_10pct": {
+          "obj_hit_rate": 0.74709,
+          "byte_hit_rate": 0.676611
+        },
+        "w103_3pct": {
+          "obj_hit_rate": 0.692989,
+          "byte_hit_rate": 0.594357
+        },
+        "w103_1pct": {
+          "obj_hit_rate": 0.654958,
+          "byte_hit_rate": 0.553664
+        },
+        "w89_10pct": {
+          "obj_hit_rate": 0.656937,
+          "byte_hit_rate": 0.537081
+        },
+        "w89_1pct": {
+          "obj_hit_rate": 0.564172,
+          "byte_hit_rate": 0.434849
+        },
+        "w89_3pct": {
+          "obj_hit_rate": 0.591852,
+          "byte_hit_rate": 0.45798
+        },
+        "w99_1pct": {
+          "obj_hit_rate": 0.328468,
+          "byte_hit_rate": 0.058798
+        },
+        "w90_10pct": {
+          "obj_hit_rate": 0.530799,
+          "byte_hit_rate": 0.437371
+        },
+        "w99_3pct": {
+          "obj_hit_rate": 0.349115,
+          "byte_hit_rate": 0.069563
+        },
+        "w105_1pct": {
+          "obj_hit_rate": 0.204414,
+          "byte_hit_rate": 0.048783
+        },
+        "w94_10pct": {
+          "obj_hit_rate": 0.458571,
+          "byte_hit_rate": 0.401247
+        },
+        "w99_10pct": {
+          "obj_hit_rate": 0.354404,
+          "byte_hit_rate": 0.070909
+        },
+        "w105_10pct": {
+          "obj_hit_rate": 0.247226,
+          "byte_hit_rate": 0.083038
+        },
+        "w105_3pct": {
+          "obj_hit_rate": 0.218704,
+          "byte_hit_rate": 0.059095
+        },
+        "w93_10pct": {
+          "obj_hit_rate": 0.171761,
+          "byte_hit_rate": 0.085302
+        },
+        "w93_1pct": {
+          "obj_hit_rate": 0.135389,
+          "byte_hit_rate": 0.054263
+        },
+        "w93_3pct": {
+          "obj_hit_rate": 0.143329,
+          "byte_hit_rate": 0.060641
+        },
+        "w94_3pct": {
+          "obj_hit_rate": 0.253133,
+          "byte_hit_rate": 0.202355
+        },
+        "w90_1pct": {
+          "obj_hit_rate": 0.217643,
+          "byte_hit_rate": 0.064198
+        },
+        "w87_10pct": {
+          "obj_hit_rate": 0.223623,
+          "byte_hit_rate": 0.362206
+        },
+        "w90_3pct": {
+          "obj_hit_rate": 0.245919,
+          "byte_hit_rate": 0.087738
+        },
+        "w87_1pct": {
+          "obj_hit_rate": 0.161744,
+          "byte_hit_rate": 0.296604
+        },
+        "w87_3pct": {
+          "obj_hit_rate": 0.182789,
+          "byte_hit_rate": 0.320288
+        },
+        "w94_1pct": {
+          "obj_hit_rate": 0.046109,
+          "byte_hit_rate": 0.037207
+        },
+        "w86_1pct": {
+          "obj_hit_rate": 0.044088,
+          "byte_hit_rate": 0.01854
+        },
+        "w86_10pct": {
+          "obj_hit_rate": 0.061037,
+          "byte_hit_rate": 0.044299
+        },
+        "w86_3pct": {
+          "obj_hit_rate": 0.046073,
+          "byte_hit_rate": 0.019544
+        }
+      },
+      "source_code": "/**\n * The seed policy (LRU): score each object by its most\n * recent access time; the cache evicts the smallest-scored (least-recently\n * accessed).\n *\n * This snippet does exactly two things:\n *   1. attach listeners to the features it reads\n *   2. define `score_fn` \u2014 that scores a SINGLE object in cache. \n * These scores are used to rank eviction candidates and the object with \n * the minimum numeric score is evicted.\n */\n\nstore_cfg.add_listeners(f_last_access, {vulcan::listeners::object::RollingWindow(1)});\nauto score_fn = [&](const vulcan::feature_store &fs, int64_t obj_id) -> double {\n  return static_cast<double>(fs.get_latest(f_last_access, obj_id));\n};\n"
+    },
+    {
+      "id": 19,
+      "submitter_name": "XG",
+      "group_name": "",
+      "heuristic_name": "##",
+      "description": "##",
+      "algo_type": "vulcanevolve",
+      "submitted_at": "2026-06-17T11:28:10.536910-05:00",
+      "mrr": 1.031691746115806,
+      "mrr_obj": 1.0166698678757087,
+      "mean_byte_hr": 0.26895,
+      "mean_obj_hr": 0.359611,
+      "results": {
+        "w106_10pct": {
+          "obj_hit_rate": 0.806768,
+          "byte_hit_rate": 0.757021
+        },
+        "w106_3pct": {
+          "obj_hit_rate": 0.739747,
+          "byte_hit_rate": 0.618377
+        },
+        "w106_1pct": {
+          "obj_hit_rate": 0.709985,
+          "byte_hit_rate": 0.557886
+        },
+        "w103_10pct": {
+          "obj_hit_rate": 0.747129,
+          "byte_hit_rate": 0.67699
+        },
+        "w103_3pct": {
+          "obj_hit_rate": 0.693024,
+          "byte_hit_rate": 0.593622
+        },
+        "w103_1pct": {
+          "obj_hit_rate": 0.654875,
+          "byte_hit_rate": 0.553454
+        },
+        "w89_10pct": {
+          "obj_hit_rate": 0.657028,
+          "byte_hit_rate": 0.537478
+        },
+        "w89_3pct": {
+          "obj_hit_rate": 0.591613,
+          "byte_hit_rate": 0.457347
+        },
+        "w89_1pct": {
+          "obj_hit_rate": 0.56419,
+          "byte_hit_rate": 0.434909
+        },
+        "w94_10pct": {
+          "obj_hit_rate": 0.458437,
+          "byte_hit_rate": 0.401181
+        },
+        "w99_10pct": {
+          "obj_hit_rate": 0.354385,
+          "byte_hit_rate": 0.070876
+        },
+        "w105_1pct": {
+          "obj_hit_rate": 0.204354,
+          "byte_hit_rate": 0.048708
+        },
+        "w105_3pct": {
+          "obj_hit_rate": 0.218729,
+          "byte_hit_rate": 0.059094
+        },
+        "w99_3pct": {
+          "obj_hit_rate": 0.349132,
+          "byte_hit_rate": 0.06958
+        },
+        "w90_10pct": {
+          "obj_hit_rate": 0.530908,
+          "byte_hit_rate": 0.43738
+        },
+        "w105_10pct": {
+          "obj_hit_rate": 0.247235,
+          "byte_hit_rate": 0.082866
+        },
+        "w87_3pct": {
+          "obj_hit_rate": 0.182769,
+          "byte_hit_rate": 0.320266
+        },
+        "w99_1pct": {
+          "obj_hit_rate": 0.328498,
+          "byte_hit_rate": 0.058873
+        },
+        "w93_10pct": {
+          "obj_hit_rate": 0.171781,
+          "byte_hit_rate": 0.085283
+        },
+        "w93_3pct": {
+          "obj_hit_rate": 0.143247,
+          "byte_hit_rate": 0.060618
+        },
+        "w90_1pct": {
+          "obj_hit_rate": 0.217567,
+          "byte_hit_rate": 0.064153
+        },
+        "w93_1pct": {
+          "obj_hit_rate": 0.13538,
+          "byte_hit_rate": 0.054323
+        },
+        "w94_3pct": {
+          "obj_hit_rate": 0.253147,
+          "byte_hit_rate": 0.202418
+        },
+        "w87_10pct": {
+          "obj_hit_rate": 0.223489,
+          "byte_hit_rate": 0.361876
+        },
+        "w87_1pct": {
+          "obj_hit_rate": 0.161665,
+          "byte_hit_rate": 0.296599
+        },
+        "w90_3pct": {
+          "obj_hit_rate": 0.245958,
+          "byte_hit_rate": 0.087809
+        },
+        "w94_1pct": {
+          "obj_hit_rate": 0.046131,
+          "byte_hit_rate": 0.037218
+        },
+        "w86_1pct": {
+          "obj_hit_rate": 0.044096,
+          "byte_hit_rate": 0.018564
+        },
+        "w86_3pct": {
+          "obj_hit_rate": 0.046068,
+          "byte_hit_rate": 0.019532
+        },
+        "w86_10pct": {
+          "obj_hit_rate": 0.060999,
+          "byte_hit_rate": 0.0442
+        }
+      },
+      "source_code": "/**\n * The seed policy (LRU): score each object by its most\n * recent access time; the cache evicts the smallest-scored (least-recently\n * accessed).\n *\n * This snippet does exactly two things:\n *   1. attach listeners to the features it reads\n *   2. define `score_fn` \u2014 that scores a SINGLE object in cache. \n * These scores are used to rank eviction candidates and the object with \n * the minimum numeric score is evicted.\n */\n\nstore_cfg.add_listeners(f_last_access, {vulcan::listeners::object::RollingWindow(1)});\nauto score_fn = [&](const vulcan::feature_store &fs, int64_t obj_id) -> double {\n  return static_cast<double>(fs.get_latest(f_last_access, obj_id));\n};\n"
+    },
+    {
+      "id": 6,
+      "submitter_name": "Baseline",
+      "group_name": "System",
+      "heuristic_name": "CLOCK",
+      "description": "CLOCK \u2014 efficient LRU approximation with a reference bit",
+      "algo_type": "classical",
+      "submitted_at": "2026-06-17T08:06:11.877088-05:00",
+      "mrr": 1.0202603200373073,
+      "mrr_obj": 1.0197824092765022,
+      "mean_byte_hr": 0.267958,
+      "mean_obj_hr": 0.36149,
+      "results": {
+        "w86_1pct": {
+          "obj_hit_rate": 0.044511,
+          "byte_hit_rate": 0.018789
+        },
+        "w86_3pct": {
+          "obj_hit_rate": 0.047326,
+          "byte_hit_rate": 0.019719
+        },
+        "w86_10pct": {
+          "obj_hit_rate": 0.059716,
+          "byte_hit_rate": 0.036553
+        },
+        "w87_1pct": {
+          "obj_hit_rate": 0.157482,
+          "byte_hit_rate": 0.286339
+        },
+        "w87_3pct": {
+          "obj_hit_rate": 0.184387,
+          "byte_hit_rate": 0.320768
+        },
+        "w87_10pct": {
+          "obj_hit_rate": 0.227307,
+          "byte_hit_rate": 0.365181
+        },
+        "w89_1pct": {
+          "obj_hit_rate": 0.566244,
+          "byte_hit_rate": 0.434468
+        },
+        "w89_3pct": {
+          "obj_hit_rate": 0.59913,
+          "byte_hit_rate": 0.462208
+        },
+        "w89_10pct": {
+          "obj_hit_rate": 0.681299,
+          "byte_hit_rate": 0.550805
+        },
+        "w90_1pct": {
+          "obj_hit_rate": 0.218547,
+          "byte_hit_rate": 0.062744
+        },
+        "w90_3pct": {
+          "obj_hit_rate": 0.24967,
+          "byte_hit_rate": 0.089637
+        },
+        "w90_10pct": {
+          "obj_hit_rate": 0.529674,
+          "byte_hit_rate": 0.4411
+        },
+        "w93_1pct": {
+          "obj_hit_rate": 0.13616,
+          "byte_hit_rate": 0.054645
+        },
+        "w93_3pct": {
+          "obj_hit_rate": 0.144791,
+          "byte_hit_rate": 0.062149
+        },
+        "w93_10pct": {
+          "obj_hit_rate": 0.173278,
+          "byte_hit_rate": 0.084672
+        },
+        "w94_1pct": {
+          "obj_hit_rate": 0.046454,
+          "byte_hit_rate": 0.037449
+        },
+        "w94_3pct": {
+          "obj_hit_rate": 0.228091,
+          "byte_hit_rate": 0.180689
+        },
+        "w94_10pct": {
+          "obj_hit_rate": 0.453103,
+          "byte_hit_rate": 0.360394
+        },
+        "w99_1pct": {
+          "obj_hit_rate": 0.330144,
+          "byte_hit_rate": 0.056
+        },
+        "w99_3pct": {
+          "obj_hit_rate": 0.349473,
+          "byte_hit_rate": 0.069892
+        },
+        "w99_10pct": {
+          "obj_hit_rate": 0.354626,
+          "byte_hit_rate": 0.071039
+        },
+        "w103_1pct": {
+          "obj_hit_rate": 0.658516,
+          "byte_hit_rate": 0.556009
+        },
+        "w103_3pct": {
+          "obj_hit_rate": 0.699165,
+          "byte_hit_rate": 0.598885
+        },
+        "w103_10pct": {
+          "obj_hit_rate": 0.749708,
+          "byte_hit_rate": 0.681142
+        },
+        "w105_1pct": {
+          "obj_hit_rate": 0.207313,
+          "byte_hit_rate": 0.049458
+        },
+        "w105_3pct": {
+          "obj_hit_rate": 0.220349,
+          "byte_hit_rate": 0.058521
+        },
+        "w105_10pct": {
+          "obj_hit_rate": 0.256895,
+          "byte_hit_rate": 0.086282
+        },
+        "w106_1pct": {
+          "obj_hit_rate": 0.712177,
+          "byte_hit_rate": 0.558377
+        },
+        "w106_3pct": {
+          "obj_hit_rate": 0.743339,
+          "byte_hit_rate": 0.619481
+        },
+        "w106_10pct": {
+          "obj_hit_rate": 0.815813,
+          "byte_hit_rate": 0.765346
+        }
+      },
+      "source_code": ""
+    },
+    {
+      "id": 2,
+      "submitter_name": "Baseline",
+      "group_name": "System",
+      "heuristic_name": "LRU",
+      "description": "Least Recently Used \u2014 evict the least recently accessed object",
+      "algo_type": "classical",
+      "submitted_at": "2026-06-17T08:06:11.415959-05:00",
+      "mrr": 1.0145957241233188,
+      "mrr_obj": 1.0135253952615324,
+      "mean_byte_hr": 0.266533,
+      "mean_obj_hr": 0.359291,
+      "results": {
+        "w86_1pct": {
+          "obj_hit_rate": 0.044262,
+          "byte_hit_rate": 0.018727
+        },
+        "w86_3pct": {
+          "obj_hit_rate": 0.046042,
+          "byte_hit_rate": 0.019371
+        },
+        "w86_10pct": {
+          "obj_hit_rate": 0.058898,
+          "byte_hit_rate": 0.036035
+        },
+        "w87_1pct": {
+          "obj_hit_rate": 0.16317,
+          "byte_hit_rate": 0.299376
+        },
+        "w87_3pct": {
+          "obj_hit_rate": 0.184017,
+          "byte_hit_rate": 0.321033
+        },
+        "w87_10pct": {
+          "obj_hit_rate": 0.224951,
+          "byte_hit_rate": 0.359524
+        },
+        "w89_1pct": {
+          "obj_hit_rate": 0.565419,
+          "byte_hit_rate": 0.436393
+        },
+        "w89_3pct": {
+          "obj_hit_rate": 0.596063,
+          "byte_hit_rate": 0.459605
+        },
+        "w89_10pct": {
+          "obj_hit_rate": 0.664396,
+          "byte_hit_rate": 0.541497
+        },
+        "w90_1pct": {
+          "obj_hit_rate": 0.21715,
+          "byte_hit_rate": 0.062408
+        },
+        "w90_3pct": {
+          "obj_hit_rate": 0.243897,
+          "byte_hit_rate": 0.086151
+        },
+        "w90_10pct": {
+          "obj_hit_rate": 0.527386,
+          "byte_hit_rate": 0.438977
+        },
+        "w93_1pct": {
+          "obj_hit_rate": 0.135653,
+          "byte_hit_rate": 0.054398
+        },
+        "w93_3pct": {
+          "obj_hit_rate": 0.143899,
+          "byte_hit_rate": 0.061376
+        },
+        "w93_10pct": {
+          "obj_hit_rate": 0.172109,
+          "byte_hit_rate": 0.084211
+        },
+        "w94_1pct": {
+          "obj_hit_rate": 0.045902,
+          "byte_hit_rate": 0.0373
+        },
+        "w94_3pct": {
+          "obj_hit_rate": 0.225612,
+          "byte_hit_rate": 0.177989
+        },
+        "w94_10pct": {
+          "obj_hit_rate": 0.449886,
+          "byte_hit_rate": 0.35744
+        },
+        "w99_1pct": {
+          "obj_hit_rate": 0.329162,
+          "byte_hit_rate": 0.056852
+        },
+        "w99_3pct": {
+          "obj_hit_rate": 0.34924,
+          "byte_hit_rate": 0.069824
+        },
+        "w99_10pct": {
+          "obj_hit_rate": 0.354231,
+          "byte_hit_rate": 0.070853
+        },
+        "w103_1pct": {
+          "obj_hit_rate": 0.655997,
+          "byte_hit_rate": 0.55426
+        },
+        "w103_3pct": {
+          "obj_hit_rate": 0.695478,
+          "byte_hit_rate": 0.594333
+        },
+        "w103_10pct": {
+          "obj_hit_rate": 0.748025,
+          "byte_hit_rate": 0.677722
+        },
+        "w105_1pct": {
+          "obj_hit_rate": 0.207557,
+          "byte_hit_rate": 0.049531
+        },
+        "w105_3pct": {
+          "obj_hit_rate": 0.22011,
+          "byte_hit_rate": 0.05922
+        },
+        "w105_10pct": {
+          "obj_hit_rate": 0.25444,
+          "byte_hit_rate": 0.08445
+        },
+        "w106_1pct": {
+          "obj_hit_rate": 0.709314,
+          "byte_hit_rate": 0.555039
+        },
+        "w106_3pct": {
+          "obj_hit_rate": 0.738759,
+          "byte_hit_rate": 0.612494
+        },
+        "w106_10pct": {
+          "obj_hit_rate": 0.807699,
+          "byte_hit_rate": 0.7596
+        }
+      },
+      "source_code": ""
+    },
+    {
+      "id": 3,
+      "submitter_name": "Baseline",
+      "group_name": "System",
+      "heuristic_name": "LFU",
+      "description": "Least Frequently Used \u2014 evict the object with lowest access count",
+      "algo_type": "classical",
+      "submitted_at": "2026-06-17T08:06:11.549275-05:00",
+      "mrr": 1.0025189910625272,
+      "mrr_obj": 1.0334147735298387,
+      "mean_byte_hr": 0.230409,
+      "mean_obj_hr": 0.360183,
+      "results": {
+        "w86_1pct": {
+          "obj_hit_rate": 0.052167,
+          "byte_hit_rate": 0.021067
+        },
+        "w86_3pct": {
+          "obj_hit_rate": 0.054016,
+          "byte_hit_rate": 0.022511
+        },
+        "w86_10pct": {
+          "obj_hit_rate": 0.069946,
+          "byte_hit_rate": 0.061303
+        },
+        "w87_1pct": {
+          "obj_hit_rate": 0.051762,
+          "byte_hit_rate": 0.054728
+        },
+        "w87_3pct": {
+          "obj_hit_rate": 0.090894,
+          "byte_hit_rate": 0.134608
+        },
+        "w87_10pct": {
+          "obj_hit_rate": 0.221888,
+          "byte_hit_rate": 0.369371
+        },
+        "w89_1pct": {
+          "obj_hit_rate": 0.548854,
+          "byte_hit_rate": 0.36185
+        },
+        "w89_3pct": {
+          "obj_hit_rate": 0.623089,
+          "byte_hit_rate": 0.445322
+        },
+        "w89_10pct": {
+          "obj_hit_rate": 0.722755,
+          "byte_hit_rate": 0.572162
+        },
+        "w90_1pct": {
+          "obj_hit_rate": 0.202007,
+          "byte_hit_rate": 0.068886
+        },
+        "w90_3pct": {
+          "obj_hit_rate": 0.263443,
+          "byte_hit_rate": 0.096459
+        },
+        "w90_10pct": {
+          "obj_hit_rate": 0.327896,
+          "byte_hit_rate": 0.160727
+        },
+        "w93_1pct": {
+          "obj_hit_rate": 0.150569,
+          "byte_hit_rate": 0.065174
+        },
+        "w93_3pct": {
+          "obj_hit_rate": 0.173222,
+          "byte_hit_rate": 0.082146
+        },
+        "w93_10pct": {
+          "obj_hit_rate": 0.230558,
+          "byte_hit_rate": 0.120191
+        },
+        "w94_1pct": {
+          "obj_hit_rate": 0.031438,
+          "byte_hit_rate": 0.017432
+        },
+        "w94_3pct": {
+          "obj_hit_rate": 0.265623,
+          "byte_hit_rate": 0.161902
+        },
+        "w94_10pct": {
+          "obj_hit_rate": 0.565268,
+          "byte_hit_rate": 0.391357
+        },
+        "w99_1pct": {
+          "obj_hit_rate": 0.352405,
+          "byte_hit_rate": 0.060777
+        },
+        "w99_3pct": {
+          "obj_hit_rate": 0.382563,
+          "byte_hit_rate": 0.082427
+        },
+        "w99_10pct": {
+          "obj_hit_rate": 0.390758,
+          "byte_hit_rate": 0.084811
+        },
+        "w103_1pct": {
+          "obj_hit_rate": 0.546313,
+          "byte_hit_rate": 0.344013
+        },
+        "w103_3pct": {
+          "obj_hit_rate": 0.613237,
+          "byte_hit_rate": 0.428548
+        },
+        "w103_10pct": {
+          "obj_hit_rate": 0.719954,
+          "byte_hit_rate": 0.607989
+        },
+        "w105_1pct": {
+          "obj_hit_rate": 0.23952,
+          "byte_hit_rate": 0.052566
+        },
+        "w105_3pct": {
+          "obj_hit_rate": 0.276135,
+          "byte_hit_rate": 0.072263
+        },
+        "w105_10pct": {
+          "obj_hit_rate": 0.342055,
+          "byte_hit_rate": 0.109461
+        },
+        "w106_1pct": {
+          "obj_hit_rate": 0.701184,
+          "byte_hit_rate": 0.532958
+        },
+        "w106_3pct": {
+          "obj_hit_rate": 0.765812,
+          "byte_hit_rate": 0.589626
+        },
+        "w106_10pct": {
+          "obj_hit_rate": 0.830154,
+          "byte_hit_rate": 0.739634
+        }
+      },
+      "source_code": ""
+    },
+    {
+      "id": 1,
+      "submitter_name": "Baseline",
+      "group_name": "System",
+      "heuristic_name": "FIFO",
+      "description": "First-In First-Out \u2014 evict the oldest inserted object",
+      "algo_type": "classical",
+      "submitted_at": "2026-06-17T08:06:11.252369-05:00",
+      "mrr": 1.0,
+      "mrr_obj": 1.0,
+      "mean_byte_hr": 0.261001,
+      "mean_obj_hr": 0.354865,
+      "results": {
+        "w86_1pct": {
+          "obj_hit_rate": 0.043842,
+          "byte_hit_rate": 0.01862
+        },
+        "w86_3pct": {
+          "obj_hit_rate": 0.045691,
+          "byte_hit_rate": 0.019287
+        },
+        "w86_10pct": {
+          "obj_hit_rate": 0.057279,
+          "byte_hit_rate": 0.035542
+        },
+        "w87_1pct": {
+          "obj_hit_rate": 0.162055,
+          "byte_hit_rate": 0.301623
+        },
+        "w87_3pct": {
+          "obj_hit_rate": 0.180004,
+          "byte_hit_rate": 0.320419
+        },
+        "w87_10pct": {
+          "obj_hit_rate": 0.219625,
+          "byte_hit_rate": 0.357351
+        },
+        "w89_1pct": {
+          "obj_hit_rate": 0.562687,
+          "byte_hit_rate": 0.43407
+        },
+        "w89_3pct": {
+          "obj_hit_rate": 0.594491,
+          "byte_hit_rate": 0.45862
+        },
+        "w89_10pct": {
+          "obj_hit_rate": 0.655951,
+          "byte_hit_rate": 0.521831
+        },
+        "w90_1pct": {
+          "obj_hit_rate": 0.212077,
+          "byte_hit_rate": 0.060428
+        },
+        "w90_3pct": {
+          "obj_hit_rate": 0.240702,
+          "byte_hit_rate": 0.084954
+        },
+        "w90_10pct": {
+          "obj_hit_rate": 0.523639,
+          "byte_hit_rate": 0.421242
+        },
+        "w93_1pct": {
+          "obj_hit_rate": 0.134738,
+          "byte_hit_rate": 0.054058
+        },
+        "w93_3pct": {
+          "obj_hit_rate": 0.142257,
+          "byte_hit_rate": 0.060461
+        },
+        "w93_10pct": {
+          "obj_hit_rate": 0.17173,
+          "byte_hit_rate": 0.083802
+        },
+        "w94_1pct": {
+          "obj_hit_rate": 0.044709,
+          "byte_hit_rate": 0.037102
+        },
+        "w94_3pct": {
+          "obj_hit_rate": 0.212273,
+          "byte_hit_rate": 0.16628
+        },
+        "w94_10pct": {
+          "obj_hit_rate": 0.451712,
+          "byte_hit_rate": 0.378422
+        },
+        "w99_1pct": {
+          "obj_hit_rate": 0.328502,
+          "byte_hit_rate": 0.059148
+        },
+        "w99_3pct": {
+          "obj_hit_rate": 0.348021,
+          "byte_hit_rate": 0.069568
+        },
+        "w99_10pct": {
+          "obj_hit_rate": 0.353511,
+          "byte_hit_rate": 0.070727
+        },
+        "w103_1pct": {
+          "obj_hit_rate": 0.645722,
+          "byte_hit_rate": 0.546227
+        },
+        "w103_3pct": {
+          "obj_hit_rate": 0.687672,
+          "byte_hit_rate": 0.589612
+        },
+        "w103_10pct": {
+          "obj_hit_rate": 0.742154,
+          "byte_hit_rate": 0.664205
+        },
+        "w105_1pct": {
+          "obj_hit_rate": 0.205091,
+          "byte_hit_rate": 0.048258
+        },
+        "w105_3pct": {
+          "obj_hit_rate": 0.219422,
+          "byte_hit_rate": 0.059475
+        },
+        "w105_10pct": {
+          "obj_hit_rate": 0.251019,
+          "byte_hit_rate": 0.0823
+        },
+        "w106_1pct": {
+          "obj_hit_rate": 0.685637,
+          "byte_hit_rate": 0.506958
+        },
+        "w106_3pct": {
+          "obj_hit_rate": 0.726288,
+          "byte_hit_rate": 0.588903
+        },
+        "w106_10pct": {
+          "obj_hit_rate": 0.797451,
+          "byte_hit_rate": 0.730545
+        }
+      },
+      "source_code": ""
+    },
+    {
+      "id": 16,
+      "submitter_name": "YouKnowWho",
+      "group_name": "LDOS",
+      "heuristic_name": "best_policy",
+      "description": "",
+      "algo_type": "vulcanevolve",
+      "submitted_at": "2026-06-17T11:23:15.082310-05:00",
+      "mrr": 0.9790185559630216,
+      "mrr_obj": 1.0472478084412085,
+      "mean_byte_hr": 0.304122,
+      "mean_obj_hr": 0.428452,
+      "results": {
+        "w106_10pct": {
+          "obj_hit_rate": 0.835535,
+          "byte_hit_rate": 0.75906
+        },
+        "w103_10pct": {
+          "obj_hit_rate": 0.767663,
+          "byte_hit_rate": 0.676316
+        },
+        "w106_3pct": {
+          "obj_hit_rate": 0.763771,
+          "byte_hit_rate": 0.635271
+        },
+        "w106_1pct": {
+          "obj_hit_rate": 0.731568,
+          "byte_hit_rate": 0.587976
+        },
+        "w89_10pct": {
+          "obj_hit_rate": 0.720302,
+          "byte_hit_rate": 0.552935
+        },
+        "w103_1pct": {
+          "obj_hit_rate": 0.673744,
+          "byte_hit_rate": 0.55887
+        },
+        "w103_3pct": {
+          "obj_hit_rate": 0.710995,
+          "byte_hit_rate": 0.593007
+        },
+        "w89_3pct": {
+          "obj_hit_rate": 0.613384,
+          "byte_hit_rate": 0.467578
+        },
+        "w89_1pct": {
+          "obj_hit_rate": 0.575022,
+          "byte_hit_rate": 0.436138
+        },
+        "w99_10pct": {
+          "obj_hit_rate": 0.399504,
+          "byte_hit_rate": 0.080431
+        },
+        "w99_3pct": {
+          "obj_hit_rate": 0.366991,
+          "byte_hit_rate": 0.071847
+        },
+        "w94_10pct": {
+          "obj_hit_rate": 0.529315,
+          "byte_hit_rate": 0.414136
+        },
+        "w90_10pct": {
+          "obj_hit_rate": 0.554993,
+          "byte_hit_rate": 0.440618
+        },
+        "w93_10pct": {
+          "obj_hit_rate": 0.27519,
+          "byte_hit_rate": 0.107991
+        },
+        "w99_1pct": {
+          "obj_hit_rate": 0.344473,
+          "byte_hit_rate": 0.060641
+        },
+        "w105_3pct": {
+          "obj_hit_rate": 0.269215,
+          "byte_hit_rate": 0.065114
+        },
+        "w105_10pct": {
+          "obj_hit_rate": 0.344668,
+          "byte_hit_rate": 0.103675
+        },
+        "w105_1pct": {
+          "obj_hit_rate": 0.215143,
+          "byte_hit_rate": 0.049375
+        },
+        "w93_1pct": {
+          "obj_hit_rate": 0.149128,
+          "byte_hit_rate": 0.057104
+        },
+        "w93_3pct": {
+          "obj_hit_rate": 0.172027,
+          "byte_hit_rate": 0.066095
+        },
+        "w94_3pct": {
+          "obj_hit_rate": 0.324422,
+          "byte_hit_rate": 0.233103
+        },
+        "w90_1pct": {
+          "obj_hit_rate": 0.23398,
+          "byte_hit_rate": 0.065964
+        },
+        "w87_10pct": {
+          "obj_hit_rate": 0.260616,
+          "byte_hit_rate": 0.416765
+        },
+        "w94_1pct": {
+          "obj_hit_rate": 0.08003,
+          "byte_hit_rate": 0.04109
+        },
+        "w90_3pct": {
+          "obj_hit_rate": 0.287829,
+          "byte_hit_rate": 0.1043
+        },
+        "w87_3pct": {
+          "obj_hit_rate": 0.201658,
+          "byte_hit_rate": 0.311566
+        },
+        "w87_1pct": {
+          "obj_hit_rate": 0.167045,
+          "byte_hit_rate": 0.254321
+        },
+        "w86_3pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w86_1pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w86_10pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        }
+      },
+      "source_code": "// ARC-style with ghost readmission bonus + size awareness\nstore_cfg.add_listeners(f_last_access, {vulcan::listeners::object::RollingWindow(1)});\nstore_cfg.add_listeners(f_count, {vulcan::listeners::object::RollingWindow(1)});\nstore_cfg.add_listeners(f_size, {vulcan::listeners::object::RollingWindow(1)});\nstore_cfg.add_listeners(f_curr_time, {vulcan::listeners::global::RollingWindow(1)});\nstore_cfg.add_listeners(f_ghost, {vulcan::listeners::global::RollingCount(8192)});\n\nauto score_fn = [&](const vulcan::feature_store &fs, int64_t obj_id) -> double {\n    double last = static_cast<double>(fs.get_latest(f_last_access, obj_id));\n    double count = static_cast<double>(fs.get_latest(f_count, obj_id));\n    double size = static_cast<double>(fs.get_latest(f_size, obj_id));\n    double now = static_cast<double>(fs.get_latest(f_curr_time));\n    double age = now - last + 1.0;\n\n    double recency = 1.0 / (1.0 + age * 0.0001);\n    double freq = log2(count + 1.0);\n    double size_pen = log2(size + 2.0);\n    double ghost_bonus = fs.contains(f_ghost, obj_id) ? 5.0 : 0.0;\n\n    return (recency + freq + ghost_bonus) / size_pen;\n};\n"
+    },
+    {
+      "id": 21,
+      "submitter_name": "YouKnowWho",
+      "group_name": "LDOS",
+      "heuristic_name": "best_policy",
+      "description": "",
+      "algo_type": "vulcanevolve",
+      "submitted_at": "2026-06-17T12:02:24.038576-05:00",
+      "mrr": 0.9785702728815117,
+      "mrr_obj": 1.0471100557167292,
+      "mean_byte_hr": 0.304005,
+      "mean_obj_hr": 0.428403,
+      "results": {
+        "w106_10pct": {
+          "obj_hit_rate": 0.835374,
+          "byte_hit_rate": 0.759162
+        },
+        "w106_3pct": {
+          "obj_hit_rate": 0.76364,
+          "byte_hit_rate": 0.635363
+        },
+        "w103_10pct": {
+          "obj_hit_rate": 0.767964,
+          "byte_hit_rate": 0.674763
+        },
+        "w106_1pct": {
+          "obj_hit_rate": 0.731527,
+          "byte_hit_rate": 0.587705
+        },
+        "w103_3pct": {
+          "obj_hit_rate": 0.710535,
+          "byte_hit_rate": 0.592734
+        },
+        "w89_10pct": {
+          "obj_hit_rate": 0.720685,
+          "byte_hit_rate": 0.552953
+        },
+        "w103_1pct": {
+          "obj_hit_rate": 0.673663,
+          "byte_hit_rate": 0.558548
+        },
+        "w89_3pct": {
+          "obj_hit_rate": 0.613145,
+          "byte_hit_rate": 0.467538
+        },
+        "w89_1pct": {
+          "obj_hit_rate": 0.574802,
+          "byte_hit_rate": 0.436514
+        },
+        "w90_10pct": {
+          "obj_hit_rate": 0.554614,
+          "byte_hit_rate": 0.440647
+        },
+        "w99_3pct": {
+          "obj_hit_rate": 0.366977,
+          "byte_hit_rate": 0.071772
+        },
+        "w99_10pct": {
+          "obj_hit_rate": 0.399497,
+          "byte_hit_rate": 0.080532
+        },
+        "w105_3pct": {
+          "obj_hit_rate": 0.26921,
+          "byte_hit_rate": 0.065002
+        },
+        "w94_10pct": {
+          "obj_hit_rate": 0.528788,
+          "byte_hit_rate": 0.413687
+        },
+        "w99_1pct": {
+          "obj_hit_rate": 0.344501,
+          "byte_hit_rate": 0.060678
+        },
+        "w93_10pct": {
+          "obj_hit_rate": 0.275123,
+          "byte_hit_rate": 0.107646
+        },
+        "w105_10pct": {
+          "obj_hit_rate": 0.344635,
+          "byte_hit_rate": 0.103833
+        },
+        "w94_3pct": {
+          "obj_hit_rate": 0.3246,
+          "byte_hit_rate": 0.233149
+        },
+        "w105_1pct": {
+          "obj_hit_rate": 0.215361,
+          "byte_hit_rate": 0.049516
+        },
+        "w93_1pct": {
+          "obj_hit_rate": 0.149139,
+          "byte_hit_rate": 0.057106
+        },
+        "w93_3pct": {
+          "obj_hit_rate": 0.172026,
+          "byte_hit_rate": 0.06596
+        },
+        "w90_1pct": {
+          "obj_hit_rate": 0.234148,
+          "byte_hit_rate": 0.066106
+        },
+        "w87_10pct": {
+          "obj_hit_rate": 0.260735,
+          "byte_hit_rate": 0.416763
+        },
+        "w87_3pct": {
+          "obj_hit_rate": 0.201538,
+          "byte_hit_rate": 0.311419
+        },
+        "w87_1pct": {
+          "obj_hit_rate": 0.166793,
+          "byte_hit_rate": 0.253997
+        },
+        "w90_3pct": {
+          "obj_hit_rate": 0.287941,
+          "byte_hit_rate": 0.104231
+        },
+        "w94_1pct": {
+          "obj_hit_rate": 0.07993,
+          "byte_hit_rate": 0.040815
+        },
+        "w86_3pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w86_10pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w86_1pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        }
+      },
+      "source_code": "// ARC-style with ghost readmission bonus + size awareness\nstore_cfg.add_listeners(f_last_access, {vulcan::listeners::object::RollingWindow(1)});\nstore_cfg.add_listeners(f_count, {vulcan::listeners::object::RollingWindow(1)});\nstore_cfg.add_listeners(f_size, {vulcan::listeners::object::RollingWindow(1)});\nstore_cfg.add_listeners(f_curr_time, {vulcan::listeners::global::RollingWindow(1)});\nstore_cfg.add_listeners(f_ghost, {vulcan::listeners::global::RollingCount(8192)});\n\nauto score_fn = [&](const vulcan::feature_store &fs, int64_t obj_id) -> double {\n    double last = static_cast<double>(fs.get_latest(f_last_access, obj_id));\n    double count = static_cast<double>(fs.get_latest(f_count, obj_id));\n    double size = static_cast<double>(fs.get_latest(f_size, obj_id));\n    double now = static_cast<double>(fs.get_latest(f_curr_time));\n    double age = now - last + 1.0;\n\n    double recency = 1.0 / (1.0 + age * 0.0001);\n    double freq = log2(count + 1.0);\n    double size_pen = log2(size + 2.0);\n    double ghost_bonus = fs.contains(f_ghost, obj_id) ? 5.0 : 0.0;\n\n    return (recency + freq + ghost_bonus) / size_pen;\n};\n"
+    },
+    {
+      "id": 24,
+      "submitter_name": "michael",
+      "group_name": "Sonnet + GEPA, 5 iterations",
+      "heuristic_name": "GhostBoost LogSize LFU",
+      "description": "",
+      "algo_type": "vulcanevolve",
+      "submitted_at": "2026-06-17T12:20:34.554065-05:00",
+      "mrr": 0.9363956266963797,
+      "mrr_obj": 0.9383688629875152,
+      "mean_byte_hr": 0.300976,
+      "mean_obj_hr": 0.40351,
+      "results": {
+        "w106_10pct": {
+          "obj_hit_rate": 0.821719,
+          "byte_hit_rate": 0.765215
+        },
+        "w103_3pct": {
+          "obj_hit_rate": 0.702492,
+          "byte_hit_rate": 0.597795
+        },
+        "w106_3pct": {
+          "obj_hit_rate": 0.75015,
+          "byte_hit_rate": 0.634087
+        },
+        "w103_10pct": {
+          "obj_hit_rate": 0.754669,
+          "byte_hit_rate": 0.681546
+        },
+        "w106_1pct": {
+          "obj_hit_rate": 0.727973,
+          "byte_hit_rate": 0.588816
+        },
+        "w103_1pct": {
+          "obj_hit_rate": 0.665313,
+          "byte_hit_rate": 0.560331
+        },
+        "w89_10pct": {
+          "obj_hit_rate": 0.696194,
+          "byte_hit_rate": 0.557183
+        },
+        "w89_1pct": {
+          "obj_hit_rate": 0.567761,
+          "byte_hit_rate": 0.437089
+        },
+        "w89_3pct": {
+          "obj_hit_rate": 0.591029,
+          "byte_hit_rate": 0.463903
+        },
+        "w94_10pct": {
+          "obj_hit_rate": 0.489358,
+          "byte_hit_rate": 0.411051
+        },
+        "w99_10pct": {
+          "obj_hit_rate": 0.356788,
+          "byte_hit_rate": 0.071573
+        },
+        "w105_1pct": {
+          "obj_hit_rate": 0.20688,
+          "byte_hit_rate": 0.049154
+        },
+        "w90_10pct": {
+          "obj_hit_rate": 0.541112,
+          "byte_hit_rate": 0.445305
+        },
+        "w99_1pct": {
+          "obj_hit_rate": 0.333046,
+          "byte_hit_rate": 0.05922
+        },
+        "w99_3pct": {
+          "obj_hit_rate": 0.351906,
+          "byte_hit_rate": 0.069994
+        },
+        "w87_10pct": {
+          "obj_hit_rate": 0.235864,
+          "byte_hit_rate": 0.374464
+        },
+        "w105_10pct": {
+          "obj_hit_rate": 0.262036,
+          "byte_hit_rate": 0.085909
+        },
+        "w93_1pct": {
+          "obj_hit_rate": 0.138358,
+          "byte_hit_rate": 0.055279
+        },
+        "w105_3pct": {
+          "obj_hit_rate": 0.220714,
+          "byte_hit_rate": 0.058843
+        },
+        "w94_3pct": {
+          "obj_hit_rate": 0.279671,
+          "byte_hit_rate": 0.218544
+        },
+        "w93_10pct": {
+          "obj_hit_rate": 0.179402,
+          "byte_hit_rate": 0.086724
+        },
+        "w90_1pct": {
+          "obj_hit_rate": 0.224032,
+          "byte_hit_rate": 0.065413
+        },
+        "w90_3pct": {
+          "obj_hit_rate": 0.256157,
+          "byte_hit_rate": 0.093725
+        },
+        "w87_3pct": {
+          "obj_hit_rate": 0.189762,
+          "byte_hit_rate": 0.31848
+        },
+        "w93_3pct": {
+          "obj_hit_rate": 0.147141,
+          "byte_hit_rate": 0.061966
+        },
+        "w87_1pct": {
+          "obj_hit_rate": 0.159284,
+          "byte_hit_rate": 0.28208
+        },
+        "w94_1pct": {
+          "obj_hit_rate": 0.045972,
+          "byte_hit_rate": 0.032661
+        },
+        "w86_3pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w86_10pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w86_1pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        }
+      },
+      "source_code": "store_cfg.add_listeners(f_last_access, {vulcan::listeners::object::RollingWindow(1)});\nstore_cfg.add_listeners(f_count, {vulcan::listeners::object::RollingWindow(1)});\nstore_cfg.add_listeners(f_size, {vulcan::listeners::object::RollingWindow(1)});\nstore_cfg.add_listeners(f_curr_time, {vulcan::listeners::global::RollingWindow(1)});\nstore_cfg.add_listeners(f_ghost, {vulcan::listeners::global::RollingCount(10000)});\n\nauto score_fn = [&](const vulcan::feature_store &fs, int64_t obj_id) -> double {\n  int64_t last_access = fs.get_latest(f_last_access, obj_id);\n  int64_t curr_time = fs.get_latest(f_curr_time);\n  int64_t count = fs.get_latest(f_count, obj_id);\n  int64_t size = fs.get_latest(f_size, obj_id);\n  \n  double recency = static_cast<double>(curr_time - last_access + 1);\n  double frequency = static_cast<double>(count);\n  double size_penalty = static_cast<double>(size);\n  \n  bool was_evicted = fs.contains(f_ghost, obj_id);\n  double ghost_boost = was_evicted ? 100.0 : 1.0;\n  \n  double score = (frequency * ghost_boost) / (recency * std::log(size_penalty + 2.0));\n  \n  return score;\n};"
+    },
+    {
+      "id": 11,
+      "submitter_name": "donghyun",
+      "group_name": "",
+      "heuristic_name": "LLMCode_20260617_161445",
+      "description": "",
+      "algo_type": "vulcanevolve",
+      "submitted_at": "2026-06-17T11:15:04.855953-05:00",
+      "mrr": 0.9219765548886005,
+      "mrr_obj": 1.0191857424978705,
+      "mean_byte_hr": 0.3085,
+      "mean_obj_hr": 0.452436,
+      "results": {
+        "w106_10pct": {
+          "obj_hit_rate": 0.841285,
+          "byte_hit_rate": 0.749078
+        },
+        "w103_10pct": {
+          "obj_hit_rate": 0.782715,
+          "byte_hit_rate": 0.669145
+        },
+        "w106_3pct": {
+          "obj_hit_rate": 0.766747,
+          "byte_hit_rate": 0.626552
+        },
+        "w103_3pct": {
+          "obj_hit_rate": 0.722768,
+          "byte_hit_rate": 0.592386
+        },
+        "w106_1pct": {
+          "obj_hit_rate": 0.732597,
+          "byte_hit_rate": 0.570825
+        },
+        "w89_10pct": {
+          "obj_hit_rate": 0.738885,
+          "byte_hit_rate": 0.543698
+        },
+        "w103_1pct": {
+          "obj_hit_rate": 0.684567,
+          "byte_hit_rate": 0.559309
+        },
+        "w89_3pct": {
+          "obj_hit_rate": 0.630703,
+          "byte_hit_rate": 0.465146
+        },
+        "w89_1pct": {
+          "obj_hit_rate": 0.579051,
+          "byte_hit_rate": 0.434464
+        },
+        "w94_10pct": {
+          "obj_hit_rate": 0.54279,
+          "byte_hit_rate": 0.399231
+        },
+        "w90_10pct": {
+          "obj_hit_rate": 0.565247,
+          "byte_hit_rate": 0.43839
+        },
+        "w105_10pct": {
+          "obj_hit_rate": 0.366883,
+          "byte_hit_rate": 0.099723
+        },
+        "w99_3pct": {
+          "obj_hit_rate": 0.37315,
+          "byte_hit_rate": 0.069978
+        },
+        "w99_10pct": {
+          "obj_hit_rate": 0.415099,
+          "byte_hit_rate": 0.078506
+        },
+        "w99_1pct": {
+          "obj_hit_rate": 0.352006,
+          "byte_hit_rate": 0.06029
+        },
+        "w93_10pct": {
+          "obj_hit_rate": 0.294815,
+          "byte_hit_rate": 0.101856
+        },
+        "w105_1pct": {
+          "obj_hit_rate": 0.216647,
+          "byte_hit_rate": 0.048174
+        },
+        "w94_3pct": {
+          "obj_hit_rate": 0.324216,
+          "byte_hit_rate": 0.216121
+        },
+        "w105_3pct": {
+          "obj_hit_rate": 0.282951,
+          "byte_hit_rate": 0.065525
+        },
+        "w93_3pct": {
+          "obj_hit_rate": 0.186165,
+          "byte_hit_rate": 0.064618
+        },
+        "w87_3pct": {
+          "obj_hit_rate": 0.211602,
+          "byte_hit_rate": 0.304564
+        },
+        "w90_1pct": {
+          "obj_hit_rate": 0.259918,
+          "byte_hit_rate": 0.067122
+        },
+        "w87_10pct": {
+          "obj_hit_rate": 0.260075,
+          "byte_hit_rate": 0.376476
+        },
+        "w90_3pct": {
+          "obj_hit_rate": 0.307758,
+          "byte_hit_rate": 0.103329
+        },
+        "w87_1pct": {
+          "obj_hit_rate": 0.174909,
+          "byte_hit_rate": 0.260901
+        },
+        "w93_1pct": {
+          "obj_hit_rate": 0.149785,
+          "byte_hit_rate": 0.055587
+        },
+        "w94_1pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w86_10pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w86_1pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w86_3pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        }
+      },
+      "source_code": "store_cfg.add_listeners(f_last_access, {vulcan::listeners::object::RollingWindow(1)});\nstore_cfg.add_listeners(f_curr_time, {vulcan::listeners::global::RollingWindow(1)});\nstore_cfg.add_listeners(f_count, {vulcan::listeners::object::RollingWindow(1)});\nstore_cfg.add_listeners(f_size, {vulcan::listeners::object::RollingWindow(1)});\nstore_cfg.add_listeners(f_insertion_time, {vulcan::listeners::object::RollingWindow(1)});\nstore_cfg.add_listeners(f_ghost, {vulcan::listeners::global::RollingCount(15000)});\n\nauto score_fn = [&](const vulcan::feature_store &fs, int64_t obj_id) -> double {\n  int64_t last_access = fs.get_latest(f_last_access, obj_id);\n  int64_t curr_time = fs.get_latest(f_curr_time);\n  int64_t access_count = fs.get_latest(f_count, obj_id);\n  int64_t size = fs.get_latest(f_size, obj_id);\n  int64_t insertion_time = fs.get_latest(f_insertion_time, obj_id);\n  \n  double recency = static_cast<double>(curr_time - last_access + 1);\n  double frequency = static_cast<double>(access_count);\n  double age = static_cast<double>(curr_time - insertion_time + 1);\n  double size_double = static_cast<double>(size);\n  \n  // Adaptive size penalty with threshold\n  double size_factor;\n  if (size_double > 50000.0) {\n    // Very large objects get strong penalty\n    size_factor = 3000.0 / (size_double / 10.0);\n  } else if (size_double > 10000.0) {\n    // Large objects get moderate penalty\n    size_factor = 5000.0 / std::sqrt(size_double);\n  } else {\n    // Small/medium objects get mild penalty\n    size_factor = 8000.0 / std::sqrt(size_double + 1.0);\n  }\n  \n  // Frequency with diminishing returns\n  double freq_score = std::pow(1.0 + frequency, 0.7);\n  \n  // Access rate: accesses per unit time\n  double access_rate = frequency / age;\n  double rate_boost = 1.0 + (access_rate * 200.0);\n  \n  // Recency with adaptive thresholds\n  double recency_score;\n  if (recency <= 3.0) {\n    recency_score = 100000.0;\n  } else if (recency <= 20.0) {\n    recency_score = 80000.0 / recency;\n  } else if (recency <= 100.0) {\n    recency_score = 10000.0 / recency;\n  } else {\n    recency_score = 800.0 / recency;\n  }\n  \n  // Ghost boost: strong signal for re-admitted objects\n  bool was_evicted = fs.contains(f_ghost, obj_id);\n  double ghost_boost = was_evicted ? 200.0 : 1.0;\n  \n  // Cold object detection: single access and old\n  double cold_penalty = (access_count == 1 && recency > 150.0) ? 0.005 : 1.0;\n  \n  // Young frequent objects (rising stars)\n  double rising_star = (age < 40.0 && frequency >= 4) ? 5.0 : 1.0;\n  \n  // Multi-access recent objects get extra boost\n  double recent_active_boost = (recency <= 10.0 && frequency >= 2) ? 3.0 : 1.0;\n  \n  // Large stale objects with low frequency: aggressive eviction\n  double stale_large_penalty = (size_double > 20000.0 && \n                                 recency > 250.0 && frequency < 4) ? 0.05 : 1.0;\n  \n  // Warm-up protection: very new objects get grace period\n  double warmup_protection = (age < 5.0 && frequency >= 2) ? 2.0 : 1.0;\n  \n  double score = recency_score * freq_score * rate_boost * size_factor * \n                 ghost_boost * cold_penalty * rising_star * recent_active_boost * \n                 stale_large_penalty * warmup_protection;\n  \n  return score;\n};"
+    },
+    {
+      "id": 15,
+      "submitter_name": "michael",
+      "group_name": "",
+      "heuristic_name": "codex calls it GhostBoosted Size-Aware LFU-R",
+      "description": "allegedly \"LFU/LRU hybrid, size-aware value density, and the distinctive ghost re-admission boost\"",
+      "algo_type": "vulcanevolve",
+      "submitted_at": "2026-06-17T11:19:20.331058-05:00",
+      "mrr": 0.8844152491597421,
+      "mrr_obj": 0.8820389580664791,
+      "mean_byte_hr": 0.313156,
+      "mean_obj_hr": 0.430254,
+      "results": {
+        "w106_10pct": {
+          "obj_hit_rate": 0.825265,
+          "byte_hit_rate": 0.760962
+        },
+        "w106_3pct": {
+          "obj_hit_rate": 0.753291,
+          "byte_hit_rate": 0.638108
+        },
+        "w106_1pct": {
+          "obj_hit_rate": 0.724181,
+          "byte_hit_rate": 0.576207
+        },
+        "w103_10pct": {
+          "obj_hit_rate": 0.753008,
+          "byte_hit_rate": 0.676799
+        },
+        "w103_3pct": {
+          "obj_hit_rate": 0.700045,
+          "byte_hit_rate": 0.59858
+        },
+        "w103_1pct": {
+          "obj_hit_rate": 0.666816,
+          "byte_hit_rate": 0.560287
+        },
+        "w89_10pct": {
+          "obj_hit_rate": 0.689686,
+          "byte_hit_rate": 0.552345
+        },
+        "w89_1pct": {
+          "obj_hit_rate": 0.567473,
+          "byte_hit_rate": 0.439623
+        },
+        "w89_3pct": {
+          "obj_hit_rate": 0.592033,
+          "byte_hit_rate": 0.472032
+        },
+        "w90_10pct": {
+          "obj_hit_rate": 0.542328,
+          "byte_hit_rate": 0.445846
+        },
+        "w99_1pct": {
+          "obj_hit_rate": 0.334407,
+          "byte_hit_rate": 0.060135
+        },
+        "w99_10pct": {
+          "obj_hit_rate": 0.365758,
+          "byte_hit_rate": 0.073483
+        },
+        "w105_1pct": {
+          "obj_hit_rate": 0.206401,
+          "byte_hit_rate": 0.049204
+        },
+        "w94_10pct": {
+          "obj_hit_rate": 0.482622,
+          "byte_hit_rate": 0.407818
+        },
+        "w105_10pct": {
+          "obj_hit_rate": 0.29764,
+          "byte_hit_rate": 0.091409
+        },
+        "w99_3pct": {
+          "obj_hit_rate": 0.352991,
+          "byte_hit_rate": 0.070457
+        },
+        "w87_10pct": {
+          "obj_hit_rate": 0.244337,
+          "byte_hit_rate": 0.388901
+        },
+        "w94_3pct": {
+          "obj_hit_rate": 0.278947,
+          "byte_hit_rate": 0.220806
+        },
+        "w105_3pct": {
+          "obj_hit_rate": 0.222557,
+          "byte_hit_rate": 0.059602
+        },
+        "w93_10pct": {
+          "obj_hit_rate": 0.186167,
+          "byte_hit_rate": 0.088032
+        },
+        "w93_1pct": {
+          "obj_hit_rate": 0.139947,
+          "byte_hit_rate": 0.056546
+        },
+        "w87_3pct": {
+          "obj_hit_rate": 0.196493,
+          "byte_hit_rate": 0.316924
+        },
+        "w90_3pct": {
+          "obj_hit_rate": 0.257277,
+          "byte_hit_rate": 0.093789
+        },
+        "w93_3pct": {
+          "obj_hit_rate": 0.150555,
+          "byte_hit_rate": 0.063421
+        },
+        "w90_1pct": {
+          "obj_hit_rate": 0.226127,
+          "byte_hit_rate": 0.067592
+        },
+        "w87_1pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w94_1pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w86_1pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w86_3pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w86_10pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        }
+      },
+      "source_code": "store_cfg.add_listeners(f_last_access, {vulcan::listeners::object::RollingWindow(1)});\nstore_cfg.add_listeners(f_curr_time, {vulcan::listeners::global::RollingWindow(1)});\nstore_cfg.add_listeners(f_count, {vulcan::listeners::object::RollingWindow(1)});\nstore_cfg.add_listeners(f_size, {vulcan::listeners::object::RollingWindow(1)});\nstore_cfg.add_listeners(f_insertion_time, {vulcan::listeners::object::RollingWindow(1)});\nstore_cfg.add_listeners(f_ghost, {vulcan::listeners::global::RollingCount(50000)});\n\nauto score_fn = [&](const vulcan::feature_store &fs, int64_t obj_id) -> double {\n  double last_access = static_cast<double>(fs.get_latest(f_last_access, obj_id));\n  double curr_time = static_cast<double>(fs.get_latest(f_curr_time));\n  double count = static_cast<double>(fs.get_latest(f_count, obj_id));\n  double size = static_cast<double>(fs.get_latest(f_size, obj_id));\n  double insertion_time = static_cast<double>(fs.get_latest(f_insertion_time, obj_id));\n  \n  double recency = curr_time - last_access + 1.0;\n  double age = curr_time - insertion_time + 1.0;\n  \n  bool was_evicted = fs.contains(f_ghost, obj_id);\n  \n  double freq_rate = count / age;\n  \n  double recency_score = 1.0 / recency;\n  double freq_score = count * freq_rate;\n  \n  double size_factor;\n  if (size > 60000.0) {\n    size_factor = size / 10000.0;\n  } else if (size < 8000.0) {\n    size_factor = size / 4000.0;\n  } else {\n    size_factor = size / 6500.0;\n  }\n  \n  double value_density = (recency_score + freq_score) / size_factor;\n  \n  double base_score;\n  if (count == 1) {\n    base_score = recency_score * 1.2 + value_density * 0.3;\n  } else if (count >= 8) {\n    base_score = freq_score * 2.5 + recency_score * 0.8 + value_density * 0.5;\n  } else {\n    double freq_weight = 0.2 + (count - 1.0) / 7.0 * 1.5;\n    base_score = recency_score * (1.5 - freq_weight * 0.4) + freq_score * freq_weight + value_density * 0.3;\n  }\n  \n  if (was_evicted) {\n    base_score *= 20.0;\n  }\n  \n  if (size < 10000.0 && count >= 2) {\n    base_score *= 1.8;\n  }\n  \n  if (freq_rate > 0.1 && size < 50000.0) {\n    base_score *= 1.4;\n  }\n  \n  return base_score;\n};"
+    },
+    {
+      "id": 14,
+      "submitter_name": "Codex",
+      "group_name": "",
+      "heuristic_name": "opus_s3fifo_inspired",
+      "description": "Opus-evolved recency frequency ghost heuristic",
+      "algo_type": "vulcanevolve",
+      "submitted_at": "2026-06-17T11:18:02.740720-05:00",
+      "mrr": 0.77218872020346,
+      "mrr_obj": 0.7052955665760748,
+      "mean_byte_hr": 0.338403,
+      "mean_obj_hr": 0.451344,
+      "results": {
+        "w106_10pct": {
+          "obj_hit_rate": 0.809215,
+          "byte_hit_rate": 0.770293
+        },
+        "w106_3pct": {
+          "obj_hit_rate": 0.749135,
+          "byte_hit_rate": 0.657721
+        },
+        "w106_1pct": {
+          "obj_hit_rate": 0.717989,
+          "byte_hit_rate": 0.586496
+        },
+        "w103_10pct": {
+          "obj_hit_rate": 0.730106,
+          "byte_hit_rate": 0.683578
+        },
+        "w103_3pct": {
+          "obj_hit_rate": 0.681439,
+          "byte_hit_rate": 0.603718
+        },
+        "w103_1pct": {
+          "obj_hit_rate": 0.653084,
+          "byte_hit_rate": 0.559531
+        },
+        "w89_10pct": {
+          "obj_hit_rate": 0.628741,
+          "byte_hit_rate": 0.549496
+        },
+        "w89_3pct": {
+          "obj_hit_rate": 0.579777,
+          "byte_hit_rate": 0.49479
+        },
+        "w89_1pct": {
+          "obj_hit_rate": 0.554576,
+          "byte_hit_rate": 0.446054
+        },
+        "w99_10pct": {
+          "obj_hit_rate": 0.366757,
+          "byte_hit_rate": 0.083947
+        },
+        "w90_10pct": {
+          "obj_hit_rate": 0.519051,
+          "byte_hit_rate": 0.446075
+        },
+        "w99_1pct": {
+          "obj_hit_rate": 0.325099,
+          "byte_hit_rate": 0.059885
+        },
+        "w99_3pct": {
+          "obj_hit_rate": 0.339169,
+          "byte_hit_rate": 0.073921
+        },
+        "w94_10pct": {
+          "obj_hit_rate": 0.44872,
+          "byte_hit_rate": 0.406318
+        },
+        "w105_10pct": {
+          "obj_hit_rate": 0.285358,
+          "byte_hit_rate": 0.104981
+        },
+        "w105_1pct": {
+          "obj_hit_rate": 0.168502,
+          "byte_hit_rate": 0.044414
+        },
+        "w105_3pct": {
+          "obj_hit_rate": 0.200295,
+          "byte_hit_rate": 0.060713
+        },
+        "w93_10pct": {
+          "obj_hit_rate": 0.169269,
+          "byte_hit_rate": 0.106948
+        },
+        "w93_1pct": {
+          "obj_hit_rate": 0.137909,
+          "byte_hit_rate": 0.059058
+        },
+        "w94_3pct": {
+          "obj_hit_rate": 0.266161,
+          "byte_hit_rate": 0.235853
+        },
+        "w93_3pct": {
+          "obj_hit_rate": 0.147867,
+          "byte_hit_rate": 0.07268
+        },
+        "w87_3pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w90_1pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w90_3pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w94_1pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w87_1pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w87_10pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w86_3pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w86_1pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w86_10pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        }
+      },
+      "source_code": "store_cfg.add_listeners(f_last_access, {vulcan::listeners::object::RollingWindow(1)});\nstore_cfg.add_listeners(f_count, {vulcan::listeners::object::RollingWindow(1)});\nstore_cfg.add_listeners(f_size, {vulcan::listeners::object::RollingWindow(1)});\nstore_cfg.add_listeners(f_insertion_time, {vulcan::listeners::object::RollingWindow(1)});\nstore_cfg.add_listeners(f_curr_time, {vulcan::listeners::global::RollingWindow(1)});\nstore_cfg.add_listeners(f_ghost, {vulcan::listeners::global::RollingCount(50000)});\n\nauto score_fn = [&](const vulcan::feature_store &fs, int64_t obj_id) -> double {\n    int64_t last_access = fs.get_latest(f_last_access, obj_id);\n    int64_t count = fs.get_latest(f_count, obj_id);\n    int64_t size = fs.get_latest(f_size, obj_id);\n    int64_t insertion_time = fs.get_latest(f_insertion_time, obj_id);\n    int64_t curr_time = fs.get_latest(f_curr_time);\n    \n    // Check if object was recently evicted and re-admitted (ghost hit)\n    bool ghost_hit = fs.contains(f_ghost, obj_id);\n    \n    // Recency: how recently was the object accessed (exponential decay)\n    int64_t age_since_access = curr_time - last_access;\n    double recency_score = std::exp(-static_cast<double>(age_since_access) / 1000.0);\n    \n    // Frequency: access count with diminishing returns\n    double freq_score = std::log1p(static_cast<double>(count));\n    \n    // Time in cache - objects that survived longer with high access are valuable\n    int64_t time_in_cache = curr_time - insertion_time + 1;\n    double access_rate = static_cast<double>(count) / static_cast<double>(time_in_cache);\n    \n    // Size-aware scoring: for byte hit rate, larger objects that are accessed\n    // contribute more bytes per hit. But we also want to keep smaller objects\n    // if they're accessed frequently (they cost less to store).\n    double size_d = static_cast<double>(size);\n    \n    // For byte hit rate: value = frequency * size (bytes delivered)\n    // But cost = size (cache space used)\n    // Efficiency = frequency (accesses per unit cache space, but each access delivers 'size' bytes)\n    // So for byte hit rate, we want: (count * size) / size = count, but weighted by recency\n    \n    // Large objects that are accessed contribute more bytes, so don't penalize size too much\n    // Instead, penalize low-frequency large objects\n    double byte_value = freq_score * std::log1p(size_d);\n    \n    // Ghost hit bonus: strong signal that object is valuable\n    double ghost_bonus = ghost_hit ? 3.0 : 1.0;\n    \n    // Combined score emphasizing recency and frequency, with size awareness\n    double score = ghost_bonus * (recency_score * 2.0 + access_rate * 10.0 + byte_value * 0.5);\n    \n    return score;\n};"
+    },
+    {
+      "id": 26,
+      "submitter_name": "Johannes",
+      "group_name": "",
+      "heuristic_name": "best_program_20260617_182505",
+      "description": "RecencyFrequencySize",
+      "algo_type": "vulcanevolve",
+      "submitted_at": "2026-06-17T13:26:00.342454-05:00",
+      "mrr": 0.7560424154542335,
+      "mrr_obj": 0.8284376310887047,
+      "mean_byte_hr": 0.321251,
+      "mean_obj_hr": 0.476107,
+      "results": {
+        "w105_1pct": {
+          "obj_hit_rate": 0.214528,
+          "byte_hit_rate": 0.045994,
+          "runtime_seconds": 99.033276
+        },
+        "w105_3pct": {
+          "obj_hit_rate": 0.24984,
+          "byte_hit_rate": 0.058153,
+          "runtime_seconds": 109.06932
+        },
+        "w105_10pct": {
+          "obj_hit_rate": 0.339065,
+          "byte_hit_rate": 0.090905,
+          "runtime_seconds": 89.198421
+        },
+        "w87_1pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0,
+          "runtime_seconds": 0.0
+        },
+        "w87_3pct": {
+          "obj_hit_rate": 0.196242,
+          "byte_hit_rate": 0.309115,
+          "runtime_seconds": 107.079865
+        },
+        "w87_10pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0,
+          "runtime_seconds": 0.0
+        },
+        "w86_1pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0,
+          "runtime_seconds": 0.0
+        },
+        "w86_3pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0,
+          "runtime_seconds": 0.0
+        },
+        "w86_10pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0,
+          "runtime_seconds": 0.0
+        },
+        "w93_1pct": {
+          "obj_hit_rate": 0.147973,
+          "byte_hit_rate": 0.053802,
+          "runtime_seconds": 98.958084
+        },
+        "w93_3pct": {
+          "obj_hit_rate": 0.174359,
+          "byte_hit_rate": 0.061534,
+          "runtime_seconds": 109.461166
+        },
+        "w93_10pct": {
+          "obj_hit_rate": 0.244955,
+          "byte_hit_rate": 0.091725,
+          "runtime_seconds": 100.336961
+        },
+        "w89_1pct": {
+          "obj_hit_rate": 0.57183,
+          "byte_hit_rate": 0.429853,
+          "runtime_seconds": 71.266749
+        },
+        "w89_3pct": {
+          "obj_hit_rate": 0.619112,
+          "byte_hit_rate": 0.461933,
+          "runtime_seconds": 58.045663
+        },
+        "w89_10pct": {
+          "obj_hit_rate": 0.706857,
+          "byte_hit_rate": 0.539516,
+          "runtime_seconds": 44.190097
+        },
+        "w103_1pct": {
+          "obj_hit_rate": 0.677156,
+          "byte_hit_rate": 0.549316,
+          "runtime_seconds": 51.527935
+        },
+        "w103_3pct": {
+          "obj_hit_rate": 0.721016,
+          "byte_hit_rate": 0.591214,
+          "runtime_seconds": 45.30602
+        },
+        "w103_10pct": {
+          "obj_hit_rate": 0.772168,
+          "byte_hit_rate": 0.669569,
+          "runtime_seconds": 39.273091
+        },
+        "w94_1pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0,
+          "runtime_seconds": 0.0
+        },
+        "w94_3pct": {
+          "obj_hit_rate": 0.335313,
+          "byte_hit_rate": 0.224042,
+          "runtime_seconds": 107.335247
+        },
+        "w94_10pct": {
+          "obj_hit_rate": 0.526877,
+          "byte_hit_rate": 0.402972,
+          "runtime_seconds": 88.928241
+        },
+        "w90_1pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0,
+          "runtime_seconds": 0.0
+        },
+        "w90_3pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0,
+          "runtime_seconds": 0.0
+        },
+        "w90_10pct": {
+          "obj_hit_rate": 0.541989,
+          "byte_hit_rate": 0.425866,
+          "runtime_seconds": 80.30685
+        },
+        "w106_1pct": {
+          "obj_hit_rate": 0.702217,
+          "byte_hit_rate": 0.50876,
+          "runtime_seconds": 44.83016
+        },
+        "w106_3pct": {
+          "obj_hit_rate": 0.762512,
+          "byte_hit_rate": 0.606709,
+          "runtime_seconds": 39.252083
+        },
+        "w106_10pct": {
+          "obj_hit_rate": 0.83505,
+          "byte_hit_rate": 0.743422,
+          "runtime_seconds": 27.987494
+        },
+        "w99_1pct": {
+          "obj_hit_rate": 0.344326,
+          "byte_hit_rate": 0.059014,
+          "runtime_seconds": 90.626941
+        },
+        "w99_3pct": {
+          "obj_hit_rate": 0.367778,
+          "byte_hit_rate": 0.067318,
+          "runtime_seconds": 97.702684
+        },
+        "w99_10pct": {
+          "obj_hit_rate": 0.423201,
+          "byte_hit_rate": 0.076788,
+          "runtime_seconds": 90.922052
+        }
+      },
+      "source_code": "store_cfg.add_listeners(f_last_access, {vulcan::listeners::object::RollingWindow(1)});\nstore_cfg.add_listeners(f_count, {vulcan::listeners::object::RollingWindow(1)});\nstore_cfg.add_listeners(f_size, {vulcan::listeners::object::RollingWindow(1), vulcan::listeners::object::PopulationPercentile()});\nstore_cfg.add_listeners(f_curr_time, {vulcan::listeners::global::RollingWindow(1)});\n\nauto score_fn = [&](const vulcan::feature_store &fs, int64_t obj_id) -> double {\n  int64_t last_access = fs.get_latest(f_last_access, obj_id);\n  int64_t count = fs.get_latest(f_count, obj_id);\n  int64_t size = fs.get_latest(f_size, obj_id);\n  int64_t curr_time = fs.get_latest(f_curr_time);\n  \n  // Normalized recency: primary signal\n  double recency = static_cast<double>(last_access) / static_cast<double>(curr_time + 1);\n  \n  // Log-scaled frequency: rewards popular objects\n  double frequency = std::log1p(static_cast<double>(count));\n  \n  // Size penalty relative to population median\n  double size_percentile_50 = static_cast<double>(fs.get_percentile(f_size, 0.5));\n  double size_ratio = static_cast<double>(size) / (size_percentile_50 + 1.0);\n  double size_factor = 1.0 / std::log1p(size_ratio);\n  \n  // Slightly boost frequency weight and reduce size_factor weight from parent\n  return recency * 1000.0 + frequency * 22.0 + size_factor * 100.0;\n};"
+    },
+    {
+      "id": 17,
+      "submitter_name": "Steven",
+      "group_name": "",
+      "heuristic_name": "best_heuristic_6f4c39f92001_20260617_162316",
+      "description": "",
+      "algo_type": "vulcanevolve",
+      "submitted_at": "2026-06-17T11:23:39.340705-05:00",
+      "mrr": 0.6970349446844367,
+      "mrr_obj": 0.7029540916295911,
+      "mean_byte_hr": 0.360152,
+      "mean_obj_hr": 0.511009,
+      "results": {
+        "w106_10pct": {
+          "obj_hit_rate": 0.833228,
+          "byte_hit_rate": 0.775145
+        },
+        "w106_3pct": {
+          "obj_hit_rate": 0.761366,
+          "byte_hit_rate": 0.649389
+        },
+        "w103_10pct": {
+          "obj_hit_rate": 0.764077,
+          "byte_hit_rate": 0.692531
+        },
+        "w106_1pct": {
+          "obj_hit_rate": 0.734667,
+          "byte_hit_rate": 0.597872
+        },
+        "w89_10pct": {
+          "obj_hit_rate": 0.724699,
+          "byte_hit_rate": 0.564604
+        },
+        "w103_3pct": {
+          "obj_hit_rate": 0.706161,
+          "byte_hit_rate": 0.595953
+        },
+        "w103_1pct": {
+          "obj_hit_rate": 0.669039,
+          "byte_hit_rate": 0.559613
+        },
+        "w89_1pct": {
+          "obj_hit_rate": 0.571046,
+          "byte_hit_rate": 0.438816
+        },
+        "w89_3pct": {
+          "obj_hit_rate": 0.603953,
+          "byte_hit_rate": 0.476577
+        },
+        "w99_1pct": {
+          "obj_hit_rate": 0.336678,
+          "byte_hit_rate": 0.060633
+        },
+        "w99_3pct": {
+          "obj_hit_rate": 0.360623,
+          "byte_hit_rate": 0.073271
+        },
+        "w90_10pct": {
+          "obj_hit_rate": 0.55121,
+          "byte_hit_rate": 0.440621
+        },
+        "w105_10pct": {
+          "obj_hit_rate": 0.34282,
+          "byte_hit_rate": 0.109246
+        },
+        "w94_10pct": {
+          "obj_hit_rate": 0.526292,
+          "byte_hit_rate": 0.422267
+        },
+        "w99_10pct": {
+          "obj_hit_rate": 0.398295,
+          "byte_hit_rate": 0.083006
+        },
+        "w105_3pct": {
+          "obj_hit_rate": 0.242744,
+          "byte_hit_rate": 0.062883
+        },
+        "w93_10pct": {
+          "obj_hit_rate": 0.274511,
+          "byte_hit_rate": 0.115036
+        },
+        "w93_1pct": {
+          "obj_hit_rate": 0.143658,
+          "byte_hit_rate": 0.057337
+        },
+        "w93_3pct": {
+          "obj_hit_rate": 0.164106,
+          "byte_hit_rate": 0.068085
+        },
+        "w105_1pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w90_1pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w87_10pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w94_1pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w87_1pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w94_3pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w90_3pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w87_3pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w86_1pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w86_3pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w86_10pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        }
+      },
+      "source_code": "// Hybrid policy: LFU-DA inspired with adaptive recency weighting and ghost awareness\n// Key innovations:\n// 1. Use EWMA for smoother frequency tracking (decay over time)\n// 2. Dynamic age factor that increases importance with time (aging)\n// 3. Strong ghost signal integration (re-admission is a clear keep signal)\n// 4. Size normalization with logarithmic scaling to avoid extreme penalties\n// 5. Recency weighting for recently accessed objects\n\nstore_cfg.add_listeners(f_count, {vulcan::listeners::object::EWMA({0.2, 0.5})});\nstore_cfg.add_listeners(f_size, {vulcan::listeners::object::RollingWindow(1)});\nstore_cfg.add_listeners(f_last_access, {vulcan::listeners::object::RollingWindow(1)});\nstore_cfg.add_listeners(f_insertion_time, {vulcan::listeners::object::RollingWindow(1)});\nstore_cfg.add_listeners(f_curr_time, {vulcan::listeners::global::RollingWindow(1)});\nstore_cfg.add_listeners(f_ghost, {vulcan::listeners::global::RollingCount(5000)});\n\nauto score_fn = [&](const vulcan::feature_store &fs, int64_t obj_id) -> double {\n  int64_t size = fs.get_latest(f_size, obj_id);\n  int64_t last_access = fs.get_latest(f_last_access, obj_id);\n  int64_t insertion_time = fs.get_latest(f_insertion_time, obj_id);\n  int64_t curr_time = fs.get_latest(f_curr_time);\n  \n  // Use fast-decay EWMA for frequency (emphasizes recent access patterns)\n  double freq_fast = fs.get_ewma(f_count, obj_id, 0.5);\n  // Use slow-decay EWMA for long-term frequency\n  double freq_slow = fs.get_ewma(f_count, obj_id, 0.2);\n  double freq_combined = 0.7 * freq_fast + 0.3 * freq_slow;\n  \n  // Logarithmic size normalization: less harsh on large objects\n  double log_size = std::log(1.0 + static_cast<double>(size));\n  double freq_per_logsize = freq_combined / log_size;\n  \n  // Age-based dynamic factor (objects accumulate value over time if accessed)\n  int64_t age = curr_time - insertion_time;\n  double age_multiplier = 1.0 + static_cast<double>(age) / 5000.0;\n  \n  // Recency: strong exponential boost for recently accessed objects\n  int64_t time_since_access = curr_time - last_access;\n  double recency_weight = 10.0 / (1.0 + static_cast<double>(time_since_access) / 100.0);\n  \n  // Ghost boost: strong signal for re-admitted objects\n  double ghost_multiplier = fs.contains(f_ghost, obj_id) ? 5.0 : 1.0;\n  \n  // Multi-access bonus: objects with multiple accesses are more valuable\n  double multi_access_bonus = (freq_combined >= 2.0) ? 1.5 : 1.0;\n  \n  return freq_per_logsize * age_multiplier * recency_weight * ghost_multiplier * multi_access_bonus;\n};\n"
+    },
+    {
+      "id": 18,
+      "submitter_name": "Hayden",
+      "group_name": "Of UW-Madison",
+      "heuristic_name": "QuadScale-Momentum",
+      "description": "I have no idea.",
+      "algo_type": "vulcanevolve",
+      "submitted_at": "2026-06-17T11:24:27.559422-05:00",
+      "mrr": 0.3153956579922531,
+      "mrr_obj": 0.31148788774616926,
+      "mean_byte_hr": 0.588749,
+      "mean_obj_hr": 0.70389,
+      "results": {
+        "w106_10pct": {
+          "obj_hit_rate": 0.826618,
+          "byte_hit_rate": 0.76694
+        },
+        "w106_3pct": {
+          "obj_hit_rate": 0.760495,
+          "byte_hit_rate": 0.636972
+        },
+        "w103_10pct": {
+          "obj_hit_rate": 0.759651,
+          "byte_hit_rate": 0.685045
+        },
+        "w106_1pct": {
+          "obj_hit_rate": 0.730275,
+          "byte_hit_rate": 0.588665
+        },
+        "w103_3pct": {
+          "obj_hit_rate": 0.705597,
+          "byte_hit_rate": 0.594954
+        },
+        "w89_10pct": {
+          "obj_hit_rate": 0.711811,
+          "byte_hit_rate": 0.56011
+        },
+        "w103_1pct": {
+          "obj_hit_rate": 0.668299,
+          "byte_hit_rate": 0.557961
+        },
+        "w89_3pct": {
+          "obj_hit_rate": 0.602089,
+          "byte_hit_rate": 0.470772
+        },
+        "w89_1pct": {
+          "obj_hit_rate": 0.570178,
+          "byte_hit_rate": 0.437319
+        },
+        "w94_10pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w90_10pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w99_1pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w94_1pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w105_3pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w90_1pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w99_3pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w105_1pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w90_3pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w105_10pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w99_10pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w94_3pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w93_1pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w87_3pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w87_10pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w93_3pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w93_10pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w87_1pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w86_1pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w86_3pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w86_10pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        }
+      },
+      "source_code": "store_cfg.add_listeners(f_last_access, {vulcan::listeners::object::RollingWindow(1)});\nstore_cfg.add_listeners(f_insertion_time, {vulcan::listeners::object::RollingWindow(1)});\nstore_cfg.add_listeners(f_count, {\n    vulcan::listeners::object::RollingWindow(1),\n    vulcan::listeners::object::EWMA({0.05, 0.2, 0.5, 0.8})\n});\nstore_cfg.add_listeners(f_size, {vulcan::listeners::object::RollingWindow(1)});\nstore_cfg.add_listeners(f_ghost, {vulcan::listeners::global::RollingCount(3500)});\nstore_cfg.add_listeners(f_curr_time, {vulcan::listeners::global::RollingWindow(1)});\n\nauto score_fn = [&](const vulcan::feature_store &fs, int64_t obj_id) -> double {\n    int64_t last_access = fs.get_latest(f_last_access, obj_id);\n    int64_t insertion_time = fs.get_latest(f_insertion_time, obj_id);\n    int64_t access_count = fs.get_latest(f_count, obj_id);\n    int64_t size = fs.get_latest(f_size, obj_id);\n    int64_t curr_time = fs.get_latest(f_curr_time);\n    \n    int64_t recency_gap = curr_time - last_access + 1;\n    int64_t age = curr_time - insertion_time + 1;\n    \n    // Tiered recency with exponential advantage for very recent accesses\n    double recency_score;\n    if (recency_gap <= 50) {\n        recency_score = 2000.0 / static_cast<double>(recency_gap);  // 2x multiplier for hot objects\n    } else if (recency_gap <= 150) {\n        recency_score = 1500.0 / pow(static_cast<double>(recency_gap), 0.8);\n    } else {\n        recency_score = 1000.0 / pow(static_cast<double>(recency_gap), 0.65);\n    }\n    \n    // Quadruple EWMA: capture patterns at 4 time scales\n    double freq_ultra_slow = fs.get_ewma(f_count, obj_id, 0.05);  // baseline popularity\n    double freq_slow = fs.get_ewma(f_count, obj_id, 0.2);         // sustained trend\n    double freq_medium = fs.get_ewma(f_count, obj_id, 0.5);       // recent pattern\n    double freq_fast = fs.get_ewma(f_count, obj_id, 0.8);         // burst/spike\n    \n    // Momentum: detect accelerating popularity (positive derivative)\n    double momentum = freq_fast - freq_medium;\n    double momentum_boost = 1.0;\n    if (momentum > 1.0) {\n        momentum_boost = 2.5;  // strong acceleration\n    } else if (momentum > 0.3) {\n        momentum_boost = 1.6;  // moderate acceleration\n    }\n    \n    // Weighted combination favoring recent patterns but respecting baseline\n    double freq_combined = 0.45 * freq_fast + 0.3 * freq_medium + 0.15 * freq_slow + 0.1 * freq_ultra_slow;\n    \n    // Access rate with logarithmic age dampening (less harsh than sqrt)\n    double log_age = log(1.0 + static_cast<double>(age));\n    double access_rate = static_cast<double>(access_count) / log_age;\n    \n    // Frequency score with momentum\n    double frequency_score = (1.0 + 3.0 * freq_combined) * (1.0 + 28.0 * access_rate) * momentum_boost;\n    \n    // Multi-tier popularity with finer gradations\n    double popularity_tier = 1.0;\n    if (access_count >= 10) {\n        popularity_tier = 5.5;\n    } else if (access_count >= 6) {\n        popularity_tier = 3.8;\n    } else if (access_count >= 3) {\n        popularity_tier = 2.2;\n    } else if (access_count >= 2) {\n        popularity_tier = 1.4;\n    }\n    \n    // Size efficiency: bytes per access (lower is better)\n    double bytes_per_access = static_cast<double>(size) / (static_cast<double>(access_count) + 1.0);\n    double size_kb = static_cast<double>(size) / 1024.0;\n    \n    // Adaptive size penalty based on efficiency\n    double size_penalty;\n    if (bytes_per_access < 5000.0 && access_rate > 0.1) {\n        size_penalty = 0.9;  // highly efficient, minimal penalty\n    } else if (access_rate > 0.05) {\n        size_penalty = 1.0 / (1.0 + 0.5 * log(1.0 + 0.7 * size_kb));\n    } else {\n        size_penalty = 1.0 / (1.0 + 1.2 * log(1.0 + size_kb));  // harsher for infrequent\n    }\n    \n    // Context-aware ghost boosting\n    double ghost_multiplier = 1.0;\n    if (fs.contains(f_ghost, obj_id)) {\n        bool quick_readmit = recency_gap < 100;\n        bool was_popular = access_count >= 4;\n        bool high_momentum = momentum > 0.5;\n        \n        if (quick_readmit && was_popular && high_momentum) {\n            ghost_multiplier = 12.0;  // perfect storm: keep at all costs\n        } else if (quick_readmit && was_popular) {\n            ghost_multiplier = 7.0;\n        } else if (quick_readmit && high_momentum) {\n            ghost_multiplier = 5.5;\n        } else if (was_popular) {\n            ghost_multiplier = 4.0;\n        } else if (quick_readmit) {\n            ghost_multiplier = 3.0;\n        } else {\n            ghost_multiplier = 2.0;\n        }\n    }\n    \n    // Multi-signal synergy: exponential boost when signals align\n    double synergy = 1.0;\n    int positive_signals = 0;\n    if (recency_gap < 100) positive_signals++;\n    if (access_rate > 0.1) positive_signals++;\n    if (momentum > 0.2) positive_signals++;\n    if (access_count >= 4) positive_signals++;\n    \n    if (positive_signals >= 3) {\n        synergy = 2.8;  // three or more positive signals\n    } else if (positive_signals == 2) {\n        synergy = 1.6;\n    }\n    \n    return recency_score * frequency_score * popularity_tier * size_penalty * ghost_multiplier * synergy;\n};"
+    },
+    {
+      "id": 25,
+      "submitter_name": "Hayden",
+      "group_name": "Of UW-Madison",
+      "heuristic_name": "BalancedHybrid \u2014 Dual-Objective EWMA-Frequency Percentile-Size-Tiered Adaptive Cache Eviction Brain!",
+      "description": "Did it work",
+      "algo_type": "vulcanevolve",
+      "submitted_at": "2026-06-17T12:43:10.283124-05:00",
+      "mrr": 0.2809378572708409,
+      "mrr_obj": 0.280243728686655,
+      "mean_byte_hr": 0.605885,
+      "mean_obj_hr": 0.727125,
+      "results": {
+        "w106_10pct": {
+          "obj_hit_rate": 0.835662,
+          "byte_hit_rate": 0.766813
+        },
+        "w106_3pct": {
+          "obj_hit_rate": 0.766372,
+          "byte_hit_rate": 0.63511
+        },
+        "w106_1pct": {
+          "obj_hit_rate": 0.732117,
+          "byte_hit_rate": 0.590389
+        },
+        "w103_10pct": {
+          "obj_hit_rate": 0.766658,
+          "byte_hit_rate": 0.683018
+        },
+        "w103_3pct": {
+          "obj_hit_rate": 0.70923,
+          "byte_hit_rate": 0.592318
+        },
+        "w89_10pct": {
+          "obj_hit_rate": 0.72727,
+          "byte_hit_rate": 0.554576
+        },
+        "w103_1pct": {
+          "obj_hit_rate": 0.66885,
+          "byte_hit_rate": 0.557185
+        },
+        "w89_3pct": {
+          "obj_hit_rate": 0.610842,
+          "byte_hit_rate": 0.467669
+        },
+        "w94_1pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w105_10pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w90_3pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w90_10pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w99_1pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w105_3pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w105_1pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w99_10pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w90_1pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w94_3pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w94_10pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w89_1pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w99_3pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w93_3pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w93_10pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w86_1pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w87_1pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w87_10pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w87_3pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w86_3pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w86_10pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w93_1pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        }
+      },
+      "source_code": "// Advanced hybrid policy with EWMA-based frequency tracking and multi-tier size handling\n// Optimizes both byte and object hit rates through balanced scoring\n\n// Per-object features\nstore_cfg.add_listeners(f_last_access, {vulcan::listeners::object::RollingWindow(1)});\nstore_cfg.add_listeners(f_count, {vulcan::listeners::object::RollingWindow(1), vulcan::listeners::object::EWMA({0.1, 0.3})});\nstore_cfg.add_listeners(f_size, {vulcan::listeners::object::RollingWindow(1), vulcan::listeners::object::PopulationPercentile()});\nstore_cfg.add_listeners(f_insertion_time, {vulcan::listeners::object::RollingWindow(1)});\n\n// Global features\nstore_cfg.add_listeners(f_curr_time, {vulcan::listeners::global::RollingWindow(1)});\nstore_cfg.add_listeners(f_ghost, {vulcan::listeners::global::RollingCount(5000)});\n\nauto score_fn = [&](const vulcan::feature_store &fs, int64_t obj_id) -> double {\n  int64_t last_access = fs.get_latest(f_last_access, obj_id);\n  int64_t curr_time = fs.get_latest(f_curr_time);\n  int64_t access_count = fs.get_latest(f_count, obj_id);\n  int64_t size = fs.get_latest(f_size, obj_id);\n  int64_t insertion_time = fs.get_latest(f_insertion_time, obj_id);\n  \n  // Recency: non-linear decay that's gentler on slightly old objects\n  double age = static_cast<double>(curr_time - last_access);\n  double recency_score = 100.0 / (1.0 + age * 0.5);\n  \n  // Frequency: combine raw rate with EWMA for trend sensitivity\n  int64_t lifetime = curr_time - insertion_time + 1;\n  double freq_rate = static_cast<double>(access_count) / static_cast<double>(lifetime);\n  double freq_ewma_fast = fs.get_ewma(f_count, obj_id, 0.3);\n  double freq_ewma_slow = fs.get_ewma(f_count, obj_id, 0.1);\n  \n  // Blend: fast EWMA catches hot objects, slow EWMA provides stability, rate gives long-term view\n  double frequency_score = freq_rate * 30.0 + freq_ewma_fast * 0.4 + freq_ewma_slow * 0.2;\n  \n  // Multi-tier size handling for better balance\n  double size_p60 = fs.get_percentile(f_size, 0.6);\n  double size_p85 = fs.get_percentile(f_size, 0.85);\n  double size_factor = 1.0;\n  if (size > size_p85) {\n    // Very large: significant penalty\n    size_factor = 0.6;\n  } else if (size > size_p60) {\n    // Medium-large: moderate penalty\n    size_factor = 0.85;\n  }\n  // Small objects (< p60): no penalty, factor = 1.0\n  \n  // Re-admission bonus: strong keep signal with optimized window\n  double readmit_bonus = fs.contains(f_ghost, obj_id) ? 3.5 : 1.0;\n  \n  // Boost for high-frequency objects (accessed 4+ times)\n  double freq_multiplier = (access_count >= 4) ? 1.3 : 1.0;\n  \n  // Combined score: balanced weighting across all signals\n  double score = (recency_score + frequency_score * freq_multiplier) * size_factor * readmit_bonus;\n  \n  return score;\n};"
+    },
+    {
+      "id": 20,
+      "submitter_name": "Hayden",
+      "group_name": "Of UW-Madison",
+      "heuristic_name": "MomentumGDSF: AI-Native Self-Adapting Multi-Scale Cache Eviction Intelligence for Hyperscale Clouds!",
+      "description": "Mom would be proud.",
+      "algo_type": "vulcanevolve",
+      "submitted_at": "2026-06-17T11:54:36.990033-05:00",
+      "mrr": 0.2478279362404689,
+      "mrr_obj": 0.24627221510401362,
+      "mean_byte_hr": 0.627755,
+      "mean_obj_hr": 0.744424,
+      "results": {
+        "w106_10pct": {
+          "obj_hit_rate": 0.832372,
+          "byte_hit_rate": 0.766533
+        },
+        "w103_10pct": {
+          "obj_hit_rate": 0.772319,
+          "byte_hit_rate": 0.677708
+        },
+        "w106_3pct": {
+          "obj_hit_rate": 0.759145,
+          "byte_hit_rate": 0.650639
+        },
+        "w106_1pct": {
+          "obj_hit_rate": 0.730741,
+          "byte_hit_rate": 0.5899
+        },
+        "w89_10pct": {
+          "obj_hit_rate": 0.732527,
+          "byte_hit_rate": 0.554003
+        },
+        "w103_3pct": {
+          "obj_hit_rate": 0.710931,
+          "byte_hit_rate": 0.595909
+        },
+        "w103_1pct": {
+          "obj_hit_rate": 0.672935,
+          "byte_hit_rate": 0.559596
+        },
+        "w99_1pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w94_1pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w105_1pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w90_3pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w105_3pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w90_1pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w90_10pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w105_10pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w99_3pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w99_10pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w94_3pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w89_3pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w93_1pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w87_3pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w89_1pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w94_10pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w93_3pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w86_1pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w87_1pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w93_10pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w86_3pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w87_10pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        },
+        "w86_10pct": {
+          "obj_hit_rate": 0.0,
+          "byte_hit_rate": 0.0
+        }
+      },
+      "source_code": "store_cfg.add_listeners(f_last_access, {vulcan::listeners::object::RollingWindow(1)});\nstore_cfg.add_listeners(f_count, {vulcan::listeners::object::RollingWindow(1), vulcan::listeners::object::EWMA({0.05, 0.2, 0.4})});\nstore_cfg.add_listeners(f_insertion_time, {vulcan::listeners::object::RollingWindow(1)});\nstore_cfg.add_listeners(f_size, {vulcan::listeners::object::RollingWindow(1), vulcan::listeners::object::PopulationPercentile()});\nstore_cfg.add_listeners(f_curr_time, {vulcan::listeners::global::RollingWindow(1)});\nstore_cfg.add_listeners(f_ghost, {vulcan::listeners::global::RollingCount(20000)});\n\nauto score_fn = [&](const vulcan::feature_store &fs, int64_t obj_id) -> double {\n    int64_t last_access = fs.get_latest(f_last_access, obj_id);\n    int64_t count = fs.get_latest(f_count, obj_id);\n    int64_t insertion_time = fs.get_latest(f_insertion_time, obj_id);\n    int64_t size = fs.get_latest(f_size, obj_id);\n    int64_t curr_time = fs.get_latest(f_curr_time);\n    \n    double age = (double)(curr_time - insertion_time + 1);\n    double time_since_access = (double)(curr_time - last_access + 1);\n    \n    // Triple EWMA for multi-scale frequency analysis\n    double ewma_short = fs.get_ewma(f_count, obj_id, 0.4);\n    double ewma_mid = fs.get_ewma(f_count, obj_id, 0.2);\n    double ewma_long = fs.get_ewma(f_count, obj_id, 0.05);\n    double frequency_score = ewma_short * 3.0 + ewma_mid * 2.0 + ewma_long;\n    \n    // Access rate normalized by age\n    double access_rate = (double)count / age;\n    \n    // Recency with stronger exponential decay\n    double recency_score = 150.0 / (1.0 + time_since_access * 0.015);\n    \n    // More aggressive graduated size penalties\n    double size_d = (double)size;\n    double p50 = fs.get_percentile(f_size, 0.5);\n    double p75 = fs.get_percentile(f_size, 0.75);\n    double p90 = fs.get_percentile(f_size, 0.9);\n    double p95 = fs.get_percentile(f_size, 0.95);\n    \n    double size_penalty = 1.0;\n    if (size_d > p95) {\n        size_penalty = 0.25;\n    } else if (size_d > p90) {\n        size_penalty = 0.45;\n    } else if (size_d > p75) {\n        size_penalty = 0.65;\n    } else if (size_d > p50) {\n        size_penalty = 0.85;\n    }\n    \n    // Ghost detection with larger window\n    bool was_evicted = fs.contains(f_ghost, obj_id);\n    \n    // Multiplicative combination for better hot object detection\n    double base_score = (access_rate * 600.0 + frequency_score * 150.0) * (recency_score / 50.0 + 1.0);\n    \n    // Apply size penalty\n    base_score *= size_penalty;\n    \n    // Enhanced ghost handling\n    if (was_evicted) {\n        // Massive boost for readmitted objects\n        base_score *= 18.0;\n        // Extra boost if recently accessed after readmission\n        if (time_since_access < 100) {\n            base_score *= 1.5;\n        }\n    }\n    \n    // Tiered frequency boosts\n    if (count >= 5) {\n        base_score *= 2.2;\n    } else if (count >= 3) {\n        base_score *= 1.6;\n    } else if (count >= 2) {\n        base_score *= 1.25;\n    }\n    \n    // Penalty for very old objects with low recent activity\n    if (age > 5000 && time_since_access > 1000) {\n        base_score *= 0.6;\n    }\n    \n    return base_score;\n};"
+    }
+  ],
+  "traces": [
+    "w86",
+    "w87",
+    "w89",
+    "w90",
+    "w93",
+    "w94",
+    "w99",
+    "w103",
+    "w105",
+    "w106"
+  ],
+  "sizes": [
+    "1pct",
+    "3pct",
+    "10pct"
+  ],
+  "generated_at": "2026-06-17T19:53:39.277556-05:00",
+  "fifo_baselines": {
+    "w86_1pct": {
+      "obj_hit_rate": 0.043842,
+      "byte_hit_rate": 0.01862
+    },
+    "w86_3pct": {
+      "obj_hit_rate": 0.045691,
+      "byte_hit_rate": 0.019287
+    },
+    "w86_10pct": {
+      "obj_hit_rate": 0.057279,
+      "byte_hit_rate": 0.035542
+    },
+    "w87_1pct": {
+      "obj_hit_rate": 0.162055,
+      "byte_hit_rate": 0.301623
+    },
+    "w87_3pct": {
+      "obj_hit_rate": 0.180004,
+      "byte_hit_rate": 0.320419
+    },
+    "w87_10pct": {
+      "obj_hit_rate": 0.219625,
+      "byte_hit_rate": 0.357351
+    },
+    "w89_1pct": {
+      "obj_hit_rate": 0.562687,
+      "byte_hit_rate": 0.43407
+    },
+    "w89_3pct": {
+      "obj_hit_rate": 0.594491,
+      "byte_hit_rate": 0.45862
+    },
+    "w89_10pct": {
+      "obj_hit_rate": 0.655951,
+      "byte_hit_rate": 0.521831
+    },
+    "w90_1pct": {
+      "obj_hit_rate": 0.212077,
+      "byte_hit_rate": 0.060428
+    },
+    "w90_3pct": {
+      "obj_hit_rate": 0.240702,
+      "byte_hit_rate": 0.084954
+    },
+    "w90_10pct": {
+      "obj_hit_rate": 0.523639,
+      "byte_hit_rate": 0.421242
+    },
+    "w93_1pct": {
+      "obj_hit_rate": 0.134738,
+      "byte_hit_rate": 0.054058
+    },
+    "w93_3pct": {
+      "obj_hit_rate": 0.142257,
+      "byte_hit_rate": 0.060461
+    },
+    "w93_10pct": {
+      "obj_hit_rate": 0.17173,
+      "byte_hit_rate": 0.083802
+    },
+    "w94_1pct": {
+      "obj_hit_rate": 0.044709,
+      "byte_hit_rate": 0.037102
+    },
+    "w94_3pct": {
+      "obj_hit_rate": 0.212273,
+      "byte_hit_rate": 0.16628
+    },
+    "w94_10pct": {
+      "obj_hit_rate": 0.451712,
+      "byte_hit_rate": 0.378422
+    },
+    "w99_1pct": {
+      "obj_hit_rate": 0.328502,
+      "byte_hit_rate": 0.059148
+    },
+    "w99_3pct": {
+      "obj_hit_rate": 0.348021,
+      "byte_hit_rate": 0.069568
+    },
+    "w99_10pct": {
+      "obj_hit_rate": 0.353511,
+      "byte_hit_rate": 0.070727
+    },
+    "w103_1pct": {
+      "obj_hit_rate": 0.645722,
+      "byte_hit_rate": 0.546227
+    },
+    "w103_3pct": {
+      "obj_hit_rate": 0.687672,
+      "byte_hit_rate": 0.589612
+    },
+    "w103_10pct": {
+      "obj_hit_rate": 0.742154,
+      "byte_hit_rate": 0.664205
+    },
+    "w105_1pct": {
+      "obj_hit_rate": 0.205091,
+      "byte_hit_rate": 0.048258
+    },
+    "w105_3pct": {
+      "obj_hit_rate": 0.219422,
+      "byte_hit_rate": 0.059475
+    },
+    "w105_10pct": {
+      "obj_hit_rate": 0.251019,
+      "byte_hit_rate": 0.0823
+    },
+    "w106_1pct": {
+      "obj_hit_rate": 0.685637,
+      "byte_hit_rate": 0.506958
+    },
+    "w106_3pct": {
+      "obj_hit_rate": 0.726288,
+      "byte_hit_rate": 0.588903
+    },
+    "w106_10pct": {
+      "obj_hit_rate": 0.797451,
+      "byte_hit_rate": 0.730545
+    }
+  }
+}
